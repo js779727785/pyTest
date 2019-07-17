@@ -18,11 +18,11 @@ def regular():
     user_name=GetUserName.full_name()
     print(user_name)
     # body = {"realName": "到代", "idCardNo": "11010119600925431X", "bankcardNo": "6222020703025077248",
-    #         "bankcode": "CMBC", "redirectUrl": "https://azure-www.qingyidai.com/xwcallback/personal"}
+    #         "bankcode": "CMBC", "redirectUrl": "https://www.baidu.com"}
     idCardNo=IDcard.getRandomIdNumber()
     bankcardNo=IDcard.bankidCardNo()
     Message_body = {"realName": user_name, "idCardNo": idCardNo, "bankcardNo": bankcardNo, "mobile": tel_num,
-                    "redirectUrl": "https://azure-www.qingyidai.com/xwcallback/personal",
+                    "redirectUrl": "https://www.baidu.com",
                     "bankcode": "CMBC"}
 
     New_RegularRN = requests.post(url=NewPersonUrl,json=Message_body,headers=headers)
