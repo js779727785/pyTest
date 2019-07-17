@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demoreport自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+    font-size:12px;
+}
+
+a.popup_link:hover {
+    color: red;
+    font-size:12px;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size:12px;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; font-size:12px}
+.failClass  { background-color: #c60; font-size:12px}
+.errorClass { background-color: #c00; font-size:12px}
+.passCase   { color: #6c6;font-size:12px }
+.failCase   { color: #c60; font-weight: bold; font-size:12px}
+.errorCase  { color: #c00; font-weight: bold; font-size:12px}
+.hiddenRow  { display: none; font-size:12px}
+.testcase   { margin-left: 4em;font-size:12px; }
+.fonts {font-size:12px;}
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>demoreport自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-07-04 10:17:55</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:01.361060</p>
+<p class='attribute'><strong>Status:</strong> Pass 2</p>
+
+<p class='description'>demoreport——description</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)' class="btn btn-xs btn-primary">Summary</a>
+<a href='javascript:showCase(1)' class="btn btn-xs btn-danger">Failed</a>
+<a href='javascript:showCase(2)' class="btn btn-xs btn-info">All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="fonts">
+    <td class="fonts">Test Group/Test case</td>
+    <td class="fonts">Count</td>
+    <td class="fonts">Pass</td>
+    <td class="fonts">Fail</td>
+    <td class="fonts">Error</td>
+    <td class="fonts">View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>juhe.juhe</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_gethomeuserinfo</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: 2019-07-04 10:17:55,858 - root - INFO - **********start
+2019-07-04 10:17:56,260 - root - INFO - {'status': 200, 'errorCodes': [], 'errorCodes1': [], 'faultedProperties': [], 'entities': [{'xAuthToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'sessionId': 'D5E10703C4E66B830F02F36AB3DB1C1E', 'globalToken': '2GwrXgssCbIvtjGiAberJFtrbOjsvC2rWAfcP3BR2JMGpu8RYYR5zgEuANEXiJSF3d1MC', 'clientToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'userAgent': 'python-requests/2.22.0', 'user': {'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac', 'createTime': '2019-05-27 11:24:37', 'updateTime': '2019-06-24 13:58:27', 'version': 0, 'name': 'ZQS_16803581610', 'telNum': '168*1610', 'isSponsor': 0, 'status': 23, 'subType': 0, 'isSupportQuickRecharge': True, 'roles': [], 'enumStatus': 'PENDING_KYPAY_CONFIRMED', 'login': True}, 'ssoid': '1445898791152850915', 'count': 0, 'seconds': 0, 'clientIp': '172.20.63.0', 'previousLoginAddress': '局域网', 'previousLoginTime': '2019-07-04 10:12:24', 'previousLoginIpAddress': '172.20.45.0'}], 'entity': {'xAuthToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'sessionId': 'D5E10703C4E66B830F02F36AB3DB1C1E', 'globalToken': '2GwrXgssCbIvtjGiAberJFtrbOjsvC2rWAfcP3BR2JMGpu8RYYR5zgEuANEXiJSF3d1MC', 'clientToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'userAgent': 'python-requests/2.22.0', 'user': {'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac', 'createTime': '2019-05-27 11:24:37', 'updateTime': '2019-06-24 13:58:27', 'version': 0, 'name': 'ZQS_16803581610', 'telNum': '168*1610', 'isSponsor': 0, 'status': 23, 'subType': 0, 'isSupportQuickRecharge': True, 'roles': [], 'enumStatus': 'PENDING_KYPAY_CONFIRMED', 'login': True}, 'ssoid': '1445898791152850915', 'count': 0, 'seconds': 0, 'clientIp': '172.20.63.0', 'previousLoginAddress': '局域网', 'previousLoginTime': '2019-07-04 10:12:24', 'previousLoginIpAddress': '172.20.45.0'}, 'successful': True}
+2019-07-04 10:17:56,263 - root - INFO - 轻易贷前端登录获取token..：2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu
+2019-07-04 10:17:56,265 - root - INFO - token:2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu
+2019-07-04 10:17:56,266 - root - INFO - 2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu
+2019-07-04 10:17:57,134 - root - INFO - response:{'status': 200, 'message': '', 'resultCode': {'code': '', 'message': ''}, 'successful': True, 'entities': [], 'mapData': {'isOpen': 3, 'productType': '', 'riskStatus': '5', 'getAppointmentStatus': {'beginTime': '2017-03-05', 'endTime': '2017-10-04', 'amount': '', 'activeProfit': '', 'totalProfit': '', 'day': '', 'activityVersion': '0', 'showBannerCode': '0', 'buyBannerCode': '0', 'financialBannerCode': '0', 'divestNoticeCode': '0', 'accountBannerCode': '0', 'buyButtonCode': '0', 'accountBannerLinkHref': '/m/activity/170316/progress.html', 'qyShowBannerCode': '0', 'qyBuyBannerCode': '0', 'qyFinancialBannerCode': '0', 'qyBuyButtonCode': '0', 'type': 'NO_INVEST'}, 'personalStatus': {'name': '荆先生', 'identity': '510101197606051149', 'bankCardNo': '6217000330022378040', 'bankCardTel': '16803581610', 'bankCord': 'PCBC', 'banKName': '建设银行', 'activateStatus': 1, 'cunguanStatus': 1, 'bankCardStatus': 2, 'isWithdraw': 0}, 'unreadNum': '170', 'safeRunTime': '1713'}, 'errorMapData': {}}
+2019-07-04 10:17:57,136 - root - INFO - old:{'status': 200, 'message': '', 'resultCode': {'code': '', 'message': ''}, 'successful': True, 'entities': [], 'mapData': {'unreadNum': '170', 'isOpen': 3, 'productType': '', 'riskStatus': '5', 'getAppointmentStatus': {'beginTime': '2017-03-05', 'endTime': '2017-10-04', 'amount': '', 'activeProfit': '', 'totalProfit': '', 'day': '', 'activityVersion': '0', 'showBannerCode': '0', 'buyBannerCode': '0', 'financialBannerCode': '0', 'divestNoticeCode': '0', 'accountBannerCode': '0', 'buyButtonCode': '0', 'accountBannerLinkHref': '/m/activity/170316/progress.html', 'qyShowBannerCode': '0', 'qyBuyBannerCode': '0', 'qyFinancialBannerCode': '0', 'qyBuyButtonCode': '0', 'type': 'NO_INVEST'}, 'personalStatus': {'name': '荆先生', 'identity': '510101197606051149', 'bankCardNo': '6217000330022378040', 'bankCardTel': '16803581610', 'bankCord': 'PCBC', 'banKName': '建设银行', 'activateStatus': 1, 'cunguanStatus': 1, 'bankCardStatus': 2, 'isWithdraw': 0}, 'safeRunTime': '1713'}, 'errorMapData': {}}
+2019-07-04 10:17:57,138 - root - INFO - ***end***
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>mtPossession.mtPossession</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_queryMtPossession</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 2019-07-04 10:17:57,140 - root - INFO - ********************start
+2019-07-04 10:17:57,165 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-07-04 10:17:57,167 - root - INFO - the params is : 16803581610
+2019-07-04 10:17:57,174 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+2019-07-04 10:17:57,200 - root - INFO - the sql is :SELECT loan_id from mt_possession where user_id=%s
+2019-07-04 10:17:57,201 - root - INFO - the params is : 816bb0ac-c302-4cc7-918a-cb91c30176ac
+2019-07-04 10:17:57,215 - root - INFO - the result data is :[{'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
+[{'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
+207658ea-7e6a-4b35-b330-d90aa47a6043
+2019-07-04 10:17:57,217 - root - INFO - end
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td class="fonts">Total</td>
+    <td class="fonts">2</td>
+    <td class="fonts" class="text text-success">2</td>
+    <td class="fonts" class="text text-danger">0</td>
+    <td class="fonts" class="text text-warning">0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
