@@ -24,7 +24,8 @@ class TestKj(unittest.TestCase):
         data["someStr"]= newstr
         #请求本次测试的核心接口
         r = requests.post(url="config.apiurl",json=data)
-        """这个地方有时候在requests内会加：verity:Flase，原因参考：https://www.jianshu.com/p/5bb96ddfbdc8"""
+        """这个地方有时候在requests内会加：verity=Flase，原因参考：https://www.jianshu.com/p/5bb96ddfbdc8
+        ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1056)"""
         respones =r.json()
         print(respones)
         # 校验接口请求响应成功。self.assertEqual(respones['code'],code)
