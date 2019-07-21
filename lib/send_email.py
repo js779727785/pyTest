@@ -6,7 +6,8 @@ from email.mime.multipart import MIMEMultipart  # 混合信息
 import sys
 
 # sys.path.append("D:\\autotest\\config")
-from config import config
+
+from config import demoConfig
 import os
 import zipfile
 import time
@@ -34,13 +35,13 @@ def send_mail_report(title, attach_name="APIGatewayTestReport.zip", receiver="ji
     :return:
     """
 
-    sender = config.sender  # 测试报告邮件发件人邮件地址
-    server = config.server  # 测试报告邮箱服务器smtp服务器
-    username = config.emailusername  # 测试报告邮件发件人邮箱账户
-    password = config.emailpassword  # 测试报告邮件发件人邮箱密码
+    sender = demoConfig.sender  # 测试报告邮件发件人邮件地址
+    server = demoConfig.server  # 测试报告邮箱服务器smtp服务器
+    username = demoConfig.emailusername  # 测试报告邮件发件人邮箱账户
+    password = demoConfig.emailpassword  # 测试报告邮件发件人邮箱密码
 
     """获取最新测试报告"""
-    report_dir = config.basedir + "/report/"
+    report_dir = demoConfig.basedir + "/report/"
     html_report = ""
     for root, sub_dirs, files in os.walk(report_dir):
         for file in files:
@@ -92,19 +93,19 @@ def send_mail_report(title, attach_name="APIGatewayTestReport.zip", receiver="ji
 
 def send_mail(title, msg):
     # 发件人
-    sender = config.sender
+    sender = demoConfig.sender
     # 收件人
-    receiver = config.receiver
+    receiver = demoConfig.receiver
     # smtp服务器
-    server = config.server
+    server = demoConfig.server
     # 标题
     title = title
     # 内容
     message = msg
     # 账户
-    username = config.emailusername
+    username = demoConfig.emailusername
     # 密码
-    password = config.emailpassword
+    password = demoConfig.emailpassword
 
     msg = MIMEText(message)
     msg["Subject"] = title
