@@ -3,14 +3,18 @@ import decimal
 from lib.MySQLHelper import MySQLHelper
 from lib.log import logger
 
-def queryuser(pho):
-    if pho is None:
-        logger.info("sql中pho为空")
+def queryuser(phone):
+    if phone is None or len(phone) ==0:
+        logger.info("sql中phone为空")
+        return ''
     sql="SELECT id from qydproduction.user where tel_num=%s"
-    result= MySQLHelper("qydproduction").get_one(sql=sql,params=pho)
-#    logger.info(result['id'])
-    return result
-# queryuser('16803581610')
+    result= MySQLHelper("qydproduction").get_one(sql=sql,params=phone)
+    if result is not None:
+        logger.info(result['id'])
+        return result['id']
+    else:
+        return ''
+# queryuser('16800333332')
 
 """以下两个学习get_many的用法
     返回结果内容为list，取值方式为：

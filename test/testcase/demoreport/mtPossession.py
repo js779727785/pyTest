@@ -12,8 +12,7 @@ class mtPossession(unittest.TestCase):
         if userid is None:
             logger.info("userid is None")
             return None
-        #先用一个queryuser查到的结果是json，提取之后传参
-        re = queryMtPossession(userid['id'])
+        re = queryMtPossession(userid)
         print(re)
         #从多个loan_id中提取第一个loan_id
         print(re[0]['loan_id'])

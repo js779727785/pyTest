@@ -7,7 +7,7 @@ from lib import mysqldb
 from lib.log import logger
 from lib.generateTestCases import __generateTestCases
 
-
+"""框架大纲可以查看该demo，实际写test_case的class可以直接复制demoTestCase中的模板进行改写"""
 class TestKj(unittest.TestCase):
     def setUp(self):
         logger.info('SetUp*******')
