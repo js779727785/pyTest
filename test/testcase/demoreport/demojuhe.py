@@ -1,7 +1,7 @@
 from lib.log import logger
 import requests
 import unittest
-from config.demoUrl import base_url
+from config.demoUrl import qyd_url
 from lib.common.DemoLogin import qydFrontLogin
 from lib.generateTestCases import __generateTestCases
 import json
@@ -14,7 +14,7 @@ class juhe(unittest.TestCase):
     def getTest(self,tx):
         logger.info("sheet case start")
         gethomeuserinfourl="/nbigfront/nw/entrance/apis/register/gethomeuserinfo/json"
-        url=base_url+gethomeuserinfourl
+        url=qyd_url+gethomeuserinfourl
         par1=tx['param']
         # print(par1)
         #从excl里提取出来的par1是str格式，要转换为json

@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>demoreport自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-07-04 10:17:55</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:01.361060</p>
-<p class='attribute'><strong>Status:</strong> Pass 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-07-23 13:43:26</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.942688</p>
+<p class='attribute'><strong>Status:</strong> Pass 7 Error 1</p>
 
 <p class='description'>demoreport——description</p>
 </div>
@@ -226,16 +226,16 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='passClass'>
-    <td>juhe.juhe</td>
-    <td>1</td>
-    <td>1</td>
+    <td>QueryAvailableline.QueryAvailableline: 查询总的可用借款额度---Jmelody</td>
+    <td>3</td>
+    <td>3</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_gethomeuserinfo</div></td>
+    <td class='none'><div class='testcase'>test_QueryAvailableline_001</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -249,14 +249,134 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-pt1.1: 2019-07-04 10:17:55,858 - root - INFO - **********start
-2019-07-04 10:17:56,260 - root - INFO - {'status': 200, 'errorCodes': [], 'errorCodes1': [], 'faultedProperties': [], 'entities': [{'xAuthToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'sessionId': 'D5E10703C4E66B830F02F36AB3DB1C1E', 'globalToken': '2GwrXgssCbIvtjGiAberJFtrbOjsvC2rWAfcP3BR2JMGpu8RYYR5zgEuANEXiJSF3d1MC', 'clientToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'userAgent': 'python-requests/2.22.0', 'user': {'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac', 'createTime': '2019-05-27 11:24:37', 'updateTime': '2019-06-24 13:58:27', 'version': 0, 'name': 'ZQS_16803581610', 'telNum': '168*1610', 'isSponsor': 0, 'status': 23, 'subType': 0, 'isSupportQuickRecharge': True, 'roles': [], 'enumStatus': 'PENDING_KYPAY_CONFIRMED', 'login': True}, 'ssoid': '1445898791152850915', 'count': 0, 'seconds': 0, 'clientIp': '172.20.63.0', 'previousLoginAddress': '局域网', 'previousLoginTime': '2019-07-04 10:12:24', 'previousLoginIpAddress': '172.20.45.0'}], 'entity': {'xAuthToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'sessionId': 'D5E10703C4E66B830F02F36AB3DB1C1E', 'globalToken': '2GwrXgssCbIvtjGiAberJFtrbOjsvC2rWAfcP3BR2JMGpu8RYYR5zgEuANEXiJSF3d1MC', 'clientToken': '2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu', 'userAgent': 'python-requests/2.22.0', 'user': {'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac', 'createTime': '2019-05-27 11:24:37', 'updateTime': '2019-06-24 13:58:27', 'version': 0, 'name': 'ZQS_16803581610', 'telNum': '168*1610', 'isSponsor': 0, 'status': 23, 'subType': 0, 'isSupportQuickRecharge': True, 'roles': [], 'enumStatus': 'PENDING_KYPAY_CONFIRMED', 'login': True}, 'ssoid': '1445898791152850915', 'count': 0, 'seconds': 0, 'clientIp': '172.20.63.0', 'previousLoginAddress': '局域网', 'previousLoginTime': '2019-07-04 10:12:24', 'previousLoginIpAddress': '172.20.45.0'}, 'successful': True}
-2019-07-04 10:17:56,263 - root - INFO - 轻易贷前端登录获取token..：2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu
-2019-07-04 10:17:56,265 - root - INFO - token:2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu
-2019-07-04 10:17:56,266 - root - INFO - 2AKy9eiAmhiKeW66QqwoESrfLMeaA7nXV8HEg6LH3kqMwRkwrrqwSVfTSR1V0ZeBO8viu
-2019-07-04 10:17:57,134 - root - INFO - response:{'status': 200, 'message': '', 'resultCode': {'code': '', 'message': ''}, 'successful': True, 'entities': [], 'mapData': {'isOpen': 3, 'productType': '', 'riskStatus': '5', 'getAppointmentStatus': {'beginTime': '2017-03-05', 'endTime': '2017-10-04', 'amount': '', 'activeProfit': '', 'totalProfit': '', 'day': '', 'activityVersion': '0', 'showBannerCode': '0', 'buyBannerCode': '0', 'financialBannerCode': '0', 'divestNoticeCode': '0', 'accountBannerCode': '0', 'buyButtonCode': '0', 'accountBannerLinkHref': '/m/activity/170316/progress.html', 'qyShowBannerCode': '0', 'qyBuyBannerCode': '0', 'qyFinancialBannerCode': '0', 'qyBuyButtonCode': '0', 'type': 'NO_INVEST'}, 'personalStatus': {'name': '荆先生', 'identity': '510101197606051149', 'bankCardNo': '6217000330022378040', 'bankCardTel': '16803581610', 'bankCord': 'PCBC', 'banKName': '建设银行', 'activateStatus': 1, 'cunguanStatus': 1, 'bankCardStatus': 2, 'isWithdraw': 0}, 'unreadNum': '170', 'safeRunTime': '1713'}, 'errorMapData': {}}
-2019-07-04 10:17:57,136 - root - INFO - old:{'status': 200, 'message': '', 'resultCode': {'code': '', 'message': ''}, 'successful': True, 'entities': [], 'mapData': {'unreadNum': '170', 'isOpen': 3, 'productType': '', 'riskStatus': '5', 'getAppointmentStatus': {'beginTime': '2017-03-05', 'endTime': '2017-10-04', 'amount': '', 'activeProfit': '', 'totalProfit': '', 'day': '', 'activityVersion': '0', 'showBannerCode': '0', 'buyBannerCode': '0', 'financialBannerCode': '0', 'divestNoticeCode': '0', 'accountBannerCode': '0', 'buyButtonCode': '0', 'accountBannerLinkHref': '/m/activity/170316/progress.html', 'qyShowBannerCode': '0', 'qyBuyBannerCode': '0', 'qyFinancialBannerCode': '0', 'qyBuyButtonCode': '0', 'type': 'NO_INVEST'}, 'personalStatus': {'name': '荆先生', 'identity': '510101197606051149', 'bankCardNo': '6217000330022378040', 'bankCardTel': '16803581610', 'bankCord': 'PCBC', 'banKName': '建设银行', 'activateStatus': 1, 'cunguanStatus': 1, 'bankCardStatus': 2, 'isWithdraw': 0}, 'safeRunTime': '1713'}, 'errorMapData': {}}
-2019-07-04 10:17:57,138 - root - INFO - ***end***
+pt1.1: 2019-07-23 13:43:26,896 - root - INFO - ****************查询总的可用借款额度接口开始****************
+2019-07-23 13:43:26,920 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-07-23 13:43:26,921 - root - INFO - the params is : 16803581610
+2019-07-23 13:43:26,928 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+2019-07-23 13:43:26,928 - root - INFO - 816bb0ac-c302-4cc7-918a-cb91c30176ac
+2019-07-23 13:43:26,929 - root - INFO - *******测试案例名称： TestCase001_查询成功 执行开始********
+2019-07-23 13:43:26,930 - root - INFO - *******测试数据： {'userId': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+2019-07-23 13:43:26,930 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+2019-07-23 13:43:27,207 - root - INFO - *******返回数据： {'code': 10000, 'data': {'allUserdBorrowLine': 8000.34, 'availableBorrowLine': 191999.66, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}, 'msg': 'SUCCESS'}
+2019-07-23 13:43:27,208 - root - INFO - *******requests结果code:  10000     ,预期结果： 10000
+2019-07-23 13:43:27,209 - root - INFO - *******测试案例名称： TestCase001_查询成功 执行完毕********
+查询结果:   {'allUserdBorrowLine': 8000.34, 'availableBorrowLine': 191999.66, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}
+2019-07-23 13:43:27,211 - root - INFO - 查询结果:   191999.66
+2019-07-23 13:43:27,212 - root - INFO - ****************查询总的可用借款额度接口结束****************
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_QueryAvailableline_002</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: 2019-07-23 13:43:27,214 - root - INFO - ****************查询总的可用借款额度接口开始****************
+2019-07-23 13:43:27,233 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-07-23 13:43:27,234 - root - INFO - the params is : 19903581120
+2019-07-23 13:43:27,242 - root - INFO - the result data is :None
+2019-07-23 13:43:27,243 - root - INFO - *******测试案例名称： TestCase002_用户不存在 执行开始********
+2019-07-23 13:43:27,245 - root - INFO - *******测试数据： {}
+2019-07-23 13:43:27,246 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+2019-07-23 13:43:27,395 - root - INFO - *******返回数据： {'code': 11017, 'msg': '用户ID为空'}
+2019-07-23 13:43:27,396 - root - INFO - *******requests结果code:  11017     ,预期结果： 11017
+2019-07-23 13:43:27,397 - root - INFO - *******测试案例名称： TestCase002_用户不存在 执行完毕********
+2019-07-23 13:43:27,397 - root - INFO - ****************查询总的可用借款额度接口结束****************
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_QueryAvailableline_003</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 2019-07-23 13:43:27,398 - root - INFO - ****************查询总的可用借款额度接口开始****************
+2019-07-23 13:43:27,423 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-07-23 13:43:27,425 - root - INFO - the params is : 19903581111
+2019-07-23 13:43:27,432 - root - INFO - the result data is :{'id': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+2019-07-23 13:43:27,433 - root - INFO - b011567f-b0fd-4b77-9827-ad2d26b303d4
+2019-07-23 13:43:27,435 - root - INFO - *******测试案例名称： TestCase003_借款存管户未开通 执行开始********
+2019-07-23 13:43:27,437 - root - INFO - *******测试数据： {'userId': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+2019-07-23 13:43:27,439 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+2019-07-23 13:43:27,598 - root - INFO - *******返回数据： {'code': 10020, 'msg': '借款存管户未开通'}
+2019-07-23 13:43:27,600 - root - INFO - *******requests结果code:  10020     ,预期结果： 10020
+2019-07-23 13:43:27,602 - root - INFO - *******测试案例名称： TestCase003_借款存管户未开通 执行完毕********
+2019-07-23 13:43:27,604 - root - INFO - ****************查询总的可用借款额度接口结束****************
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>unittest.loader._FailedTest</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>demojuhe</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        error</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: ImportError: Failed to import test module: demojuhe
+Traceback (most recent call last):
+  File "C:\Program Files\Python\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Program Files\Python\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "D:\myapp\pyTest\test\testcase\demoreport\demojuhe.py", line 4, in &lt;module&gt;
+    from config.demoUrl import base_url
+ImportError: cannot import name 'base_url' from 'config.demoUrl' (D:\myapp\pyTest\config\demoUrl.py)
+
 
 
         </pre>
@@ -272,34 +392,144 @@ pt1.1: 2019-07-04 10:17:55,858 - root - INFO - **********start
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
 </tr>
 
-<tr id='pt2.1' class='hiddenRow'>
+<tr id='pt3.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_queryMtPossession</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
         pass</a>
 
-    <div id='div_pt2.1' class="popup_window">
+    <div id='div_pt3.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt2.1: 2019-07-04 10:17:57,140 - root - INFO - ********************start
-2019-07-04 10:17:57,165 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
-2019-07-04 10:17:57,167 - root - INFO - the params is : 16803581610
-2019-07-04 10:17:57,174 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
-2019-07-04 10:17:57,200 - root - INFO - the sql is :SELECT loan_id from mt_possession where user_id=%s
-2019-07-04 10:17:57,201 - root - INFO - the params is : 816bb0ac-c302-4cc7-918a-cb91c30176ac
-2019-07-04 10:17:57,215 - root - INFO - the result data is :[{'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
-[{'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
-207658ea-7e6a-4b35-b330-d90aa47a6043
-2019-07-04 10:17:57,217 - root - INFO - end
+pt3.1: 2019-07-23 13:43:27,607 - root - INFO - ********************start
+2019-07-23 13:43:27,632 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-07-23 13:43:27,633 - root - INFO - the params is : 16803581610
+2019-07-23 13:43:27,638 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+2019-07-23 13:43:27,639 - root - INFO - 816bb0ac-c302-4cc7-918a-cb91c30176ac
+2019-07-23 13:43:27,663 - root - INFO - the sql is :SELECT loan_id from mt_possession where user_id=%s
+2019-07-23 13:43:27,664 - root - INFO - the params is : 816bb0ac-c302-4cc7-918a-cb91c30176ac
+2019-07-23 13:43:27,680 - root - INFO - the result data is :[{'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
+[{'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
+60a72ada-ad5f-4dac-ab2a-47ca7731dd7b
+2019-07-23 13:43:27,681 - root - INFO - end
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>queryQy.queryQy: JD查询企业信息---Jmelody</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',3)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_queryQy_001</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: 2019-07-23 13:43:27,682 - root - INFO - ****************JD查询企业信息接口开始****************
+2019-07-23 13:43:27,683 - root - INFO - *******测试案例名称： TestCase001_查询正常企业成功 执行开始********
+2019-07-23 13:43:27,684 - root - INFO - *******测试数据： 长沙市天心区祝博士教育信息咨询服务部
+2019-07-23 13:43:27,685 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=长沙市天心区祝博士教育信息咨询服务部&amp;ssoId=1445898791152850915&amp;platform=qyd
+2019-07-23 13:43:27,733 - root - INFO - *******返回数据： {'code': 10000, 'data': {'shareHolderList': [], 'branchRecordList': [], 'alterRecordList': [], 'mainStaffInfo': [], 'basicInfo': {'regNo': '430103600258473', 'opScope': '教育咨询。（涉及许可审批的经营项目，凭许可证或审批文件方可经营）', 'dom': '长沙市天心区芙蓉南路一段758号和庄公寓4、5号栋B区106号。', 'entName': '长沙市天心区祝博士教育信息咨询服务部', 'city': '长沙市', 'county': '天心区', 'opTo': '', 'frName': '廖芳', 'entType': '个体工商户', 'creditCode': '', 'regCapCur': '', 'oldName': '', 'approvedTime': '2014-08-27', 'regCap': '', 'industryLargeName': '商务服务业', 'opFrom': '', 'industryPhyName': '租赁和商务服务业', 'industryMiddleName': '咨询与调查', 'esDate': '2014-08-27', 'orgCodes': '', 'regOrg': '长沙市工商行政管理局天心分局', 'validTime': '长期', 'entStatus': '存续（在营、开业、在册）', 'regOrgProvince': '湖南省', 'entBroadType': '个体'}}, 'msg': 'JD查询企业信息成功', 'successful': True}
+2019-07-23 13:43:27,736 - root - INFO - *******requests结果code:  10000     ,预期结果： 10000
+2019-07-23 13:43:27,737 - root - INFO - *******测试案例名称： TestCase001_查询正常企业成功 执行完毕********
+取得企业status内容:   存续（在营、开业、在册）
+2019-07-23 13:43:27,739 - root - INFO - 取得企业status内容:   存续（在营、开业、在册）
+2019-07-23 13:43:27,741 - root - INFO - ****************JD查询企业信息接口结束****************
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_queryQy_002</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        pass</a>
+
+    <div id='div_pt4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.2: 2019-07-23 13:43:27,743 - root - INFO - ****************JD查询企业信息接口开始****************
+2019-07-23 13:43:27,745 - root - INFO - *******测试案例名称： TestCase002_查询注销企业成功 执行开始********
+2019-07-23 13:43:27,747 - root - INFO - *******测试数据： 易门升凯商贸有限公司
+2019-07-23 13:43:27,748 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=易门升凯商贸有限公司&amp;ssoId=1445898791152850915&amp;platform=qyd
+2019-07-23 13:43:27,796 - root - INFO - *******返回数据： {'code': 10000, 'data': {'shareHolderList': [{'invType': '个人股东', 'subConAm': '350.0', 'canDate': '2014-01-09', 'conForm': '货币', 'shaName': '王晓英', 'fundedRatio': '70.00%'}, {'invType': '个人股东', 'subConAm': '150.0', 'canDate': '2014-01-09', 'conForm': '货币', 'shaName': '张占学', 'fundedRatio': '30.00%'}], 'branchRecordList': [], 'alterRecordList': [{'alterAf': '注销', 'alterBe': '存续（在营、开业、在册）', 'alterDate': '2018-04-28', 'alterItem': '经营状态'}, {'alterAf': '负责人：张占学;成员：王晓英;成员：薛兆明;', 'alterBe': '无', 'alterDate': '2018-03-06', 'alterItem': '分公司/分支机构备案'}, {'alterAf': '负责人：张占学;成员：王晓英;成员：薛兆明;', 'alterBe': '无', 'alterDate': '2018-03-06', 'alterItem': '清算组成员备案'}, {'alterAf': '薛兆明***', 'alterBe': '', 'alterDate': '2017-12-18', 'alterItem': '财务负责人'}], 'mainStaffInfo': [{'staffTypeName': '执行董事兼总经理', 'name': '张占学'}, {'staffTypeName': '监事', 'name': '王晓英'}], 'basicInfo': {'regNo': '530425100004260', 'opScope': '机械设备及配件、汽摩配件、五金交电、电子数码产品、文化用品、汽车装饰用品、服装面料、毛纺织品、计算机硬件、橡胶制品、化肥、化工原料及产品（不含危险品）、矿石及矿产品销售；货物及技术进出口贸易。（依法须经批准的项目，经相关部门批准后方可开展经营活动）', 'dom': '云南省玉溪市易门县龙泉镇龙泉西路花园小区10号商铺', 'entName': '易门升凯商贸有限公司', 'city': '玉溪市', 'county': '易门县', 'opTo': '2063-02-28', 'frName': '张占学', 'entType': '有限责任公司(自然人投资或控股)', 'creditCode': '91530425061583190F', 'regCapCur': '人民币', 'oldName': '', 'approvedTime': '2017-12-18', 'regCap': '500.000000万人民币', 'industryLargeName': '批发业', 'email': '无', 'opFrom': '2013-02-28', 'industryPhyName': '批发和零售业', 'industryMiddleName': '机械设备、五金产品及电子产品批发', 'esDate': '2013-02-28', 'orgCodes': '061583190', 'phoneNumber': '13908896725', 'regOrg': '易门县市场监督管理局', 'validTime': '2063-02-28', 'entStatus': '注销', 'regOrgProvince': '云南省', 'entBroadType': '企业'}}, 'msg': 'JD查询企业信息成功', 'successful': True}
+2019-07-23 13:43:27,797 - root - INFO - *******requests结果code:  10000     ,预期结果： 10000
+2019-07-23 13:43:27,798 - root - INFO - *******测试案例名称： TestCase002_查询注销企业成功 执行完毕********
+取得企业status内容:   注销
+2019-07-23 13:43:27,799 - root - INFO - 取得企业status内容:   注销
+2019-07-23 13:43:27,800 - root - INFO - ****************JD查询企业信息接口结束****************
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_queryQy_003</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
+
+    <div id='div_pt4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.3: 2019-07-23 13:43:27,801 - root - INFO - ****************JD查询企业信息接口开始****************
+2019-07-23 13:43:27,802 - root - INFO - *******测试案例名称： TestCase003_参数错误 执行开始********
+2019-07-23 13:43:27,803 - root - INFO - *******测试数据： 
+2019-07-23 13:43:27,803 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=&amp;ssoId=1445898791152850915&amp;platform=qyd
+2019-07-23 13:43:27,835 - root - INFO - *******返回数据： {'code': 50003, 'data': None, 'msg': '参数错误', 'successful': False}
+2019-07-23 13:43:27,836 - root - INFO - *******requests结果code:  50003     ,预期结果： 50003
+2019-07-23 13:43:27,837 - root - INFO - *******测试案例名称： TestCase003_参数错误 执行完毕********
+2019-07-23 13:43:27,838 - root - INFO - ****************JD查询企业信息接口结束****************
 
 
         </pre>
@@ -311,10 +541,10 @@ pt2.1: 2019-07-04 10:17:57,140 - root - INFO - ********************start
 
 <tr id='total_row'>
     <td class="fonts">Total</td>
-    <td class="fonts">2</td>
-    <td class="fonts" class="text text-success">2</td>
+    <td class="fonts">8</td>
+    <td class="fonts" class="text text-success">7</td>
     <td class="fonts" class="text text-danger">0</td>
-    <td class="fonts" class="text text-warning">0</td>
+    <td class="fonts" class="text text-warning">1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

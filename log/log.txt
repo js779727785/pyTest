@@ -7980,3 +7980,128 @@
 19-07-23 13:38 root         INFO     *******返回数据： {'code': 10020, 'msg': '借款存管户未开通'}
 19-07-23 13:38 root         INFO     *******requests结果code:  10020     ,预期结果： 10020
 19-07-23 13:38 root         INFO     ****************查询总的可用借款额度接口结束****************
+19-07-23 13:42 root         INFO     ****************查询总的可用借款额度接口开始****************
+19-07-23 13:42 root         INFO     the sql is : SELECT id from qydproduction.user where tel_num=%s
+19-07-23 13:42 root         INFO     the params is : 16803581610
+19-07-23 13:42 root         INFO     the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+19-07-23 13:42 root         INFO     816bb0ac-c302-4cc7-918a-cb91c30176ac
+19-07-23 13:42 root         INFO     *******测试案例名称： TestCase001_查询成功 执行开始********
+19-07-23 13:42 root         INFO     *******测试数据： {'userId': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+19-07-23 13:42 root         INFO     *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+19-07-23 13:42 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): azure-www.qingyidai.com:80
+19-07-23 13:42 urllib3.connectionpool DEBUG    http://azure-www.qingyidai.com:80 "POST /nbigfront/loan/queryavailableline HTTP/1.1" 200 None
+19-07-23 13:42 root         INFO     *******返回数据： {'code': 10000, 'data': {'allUserdBorrowLine': 8000.34, 'availableBorrowLine': 191999.66, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}, 'msg': 'SUCCESS'}
+19-07-23 13:42 root         INFO     *******requests结果code:  10000     ,预期结果： 10000
+19-07-23 13:42 root         INFO     *******测试案例名称： TestCase001_查询成功 执行完毕********
+19-07-23 13:42 root         INFO     查询结果:   191999.66
+19-07-23 13:42 root         INFO     ****************查询总的可用借款额度接口结束****************
+19-07-23 13:42 root         INFO     ****************查询总的可用借款额度接口开始****************
+19-07-23 13:42 root         INFO     the sql is : SELECT id from qydproduction.user where tel_num=%s
+19-07-23 13:42 root         INFO     the params is : 19903581120
+19-07-23 13:42 root         INFO     the result data is :None
+19-07-23 13:42 root         INFO     *******测试案例名称： TestCase002_用户不存在 执行开始********
+19-07-23 13:42 root         INFO     *******测试数据： {}
+19-07-23 13:42 root         INFO     *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+19-07-23 13:42 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): azure-www.qingyidai.com:80
+19-07-23 13:42 urllib3.connectionpool DEBUG    http://azure-www.qingyidai.com:80 "POST /nbigfront/loan/queryavailableline HTTP/1.1" 200 None
+19-07-23 13:42 root         INFO     *******返回数据： {'code': 11017, 'msg': '用户ID为空'}
+19-07-23 13:42 root         INFO     *******requests结果code:  11017     ,预期结果： 11017
+19-07-23 13:42 root         INFO     *******测试案例名称： TestCase002_用户不存在 执行完毕********
+19-07-23 13:42 root         INFO     ****************查询总的可用借款额度接口结束****************
+19-07-23 13:42 root         INFO     ****************查询总的可用借款额度接口开始****************
+19-07-23 13:42 root         INFO     the sql is : SELECT id from qydproduction.user where tel_num=%s
+19-07-23 13:42 root         INFO     the params is : 19903581111
+19-07-23 13:42 root         INFO     the result data is :{'id': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+19-07-23 13:42 root         INFO     b011567f-b0fd-4b77-9827-ad2d26b303d4
+19-07-23 13:42 root         INFO     *******测试案例名称： TestCase003_借款存管户未开通 执行开始********
+19-07-23 13:42 root         INFO     *******测试数据： {'userId': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+19-07-23 13:42 root         INFO     *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+19-07-23 13:42 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): azure-www.qingyidai.com:80
+19-07-23 13:42 urllib3.connectionpool DEBUG    http://azure-www.qingyidai.com:80 "POST /nbigfront/loan/queryavailableline HTTP/1.1" 200 None
+19-07-23 13:42 root         INFO     *******返回数据： {'code': 10020, 'msg': '借款存管户未开通'}
+19-07-23 13:42 root         INFO     *******requests结果code:  10020     ,预期结果： 10020
+19-07-23 13:42 root         INFO     *******测试案例名称： TestCase003_借款存管户未开通 执行完毕********
+19-07-23 13:42 root         INFO     ****************查询总的可用借款额度接口结束****************
+19-07-23 13:43 root         INFO     ****************查询总的可用借款额度接口开始****************
+19-07-23 13:43 root         INFO     the sql is : SELECT id from qydproduction.user where tel_num=%s
+19-07-23 13:43 root         INFO     the params is : 16803581610
+19-07-23 13:43 root         INFO     the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+19-07-23 13:43 root         INFO     816bb0ac-c302-4cc7-918a-cb91c30176ac
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase001_查询成功 执行开始********
+19-07-23 13:43 root         INFO     *******测试数据： {'userId': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+19-07-23 13:43 root         INFO     *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+19-07-23 13:43 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): azure-www.qingyidai.com:80
+19-07-23 13:43 urllib3.connectionpool DEBUG    http://azure-www.qingyidai.com:80 "POST /nbigfront/loan/queryavailableline HTTP/1.1" 200 None
+19-07-23 13:43 root         INFO     *******返回数据： {'code': 10000, 'data': {'allUserdBorrowLine': 8000.34, 'availableBorrowLine': 191999.66, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}, 'msg': 'SUCCESS'}
+19-07-23 13:43 root         INFO     *******requests结果code:  10000     ,预期结果： 10000
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase001_查询成功 执行完毕********
+19-07-23 13:43 root         INFO     查询结果:   191999.66
+19-07-23 13:43 root         INFO     ****************查询总的可用借款额度接口结束****************
+19-07-23 13:43 root         INFO     ****************查询总的可用借款额度接口开始****************
+19-07-23 13:43 root         INFO     the sql is : SELECT id from qydproduction.user where tel_num=%s
+19-07-23 13:43 root         INFO     the params is : 19903581120
+19-07-23 13:43 root         INFO     the result data is :None
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase002_用户不存在 执行开始********
+19-07-23 13:43 root         INFO     *******测试数据： {}
+19-07-23 13:43 root         INFO     *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+19-07-23 13:43 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): azure-www.qingyidai.com:80
+19-07-23 13:43 urllib3.connectionpool DEBUG    http://azure-www.qingyidai.com:80 "POST /nbigfront/loan/queryavailableline HTTP/1.1" 200 None
+19-07-23 13:43 root         INFO     *******返回数据： {'code': 11017, 'msg': '用户ID为空'}
+19-07-23 13:43 root         INFO     *******requests结果code:  11017     ,预期结果： 11017
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase002_用户不存在 执行完毕********
+19-07-23 13:43 root         INFO     ****************查询总的可用借款额度接口结束****************
+19-07-23 13:43 root         INFO     ****************查询总的可用借款额度接口开始****************
+19-07-23 13:43 root         INFO     the sql is : SELECT id from qydproduction.user where tel_num=%s
+19-07-23 13:43 root         INFO     the params is : 19903581111
+19-07-23 13:43 root         INFO     the result data is :{'id': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+19-07-23 13:43 root         INFO     b011567f-b0fd-4b77-9827-ad2d26b303d4
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase003_借款存管户未开通 执行开始********
+19-07-23 13:43 root         INFO     *******测试数据： {'userId': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+19-07-23 13:43 root         INFO     *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+19-07-23 13:43 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): azure-www.qingyidai.com:80
+19-07-23 13:43 urllib3.connectionpool DEBUG    http://azure-www.qingyidai.com:80 "POST /nbigfront/loan/queryavailableline HTTP/1.1" 200 None
+19-07-23 13:43 root         INFO     *******返回数据： {'code': 10020, 'msg': '借款存管户未开通'}
+19-07-23 13:43 root         INFO     *******requests结果code:  10020     ,预期结果： 10020
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase003_借款存管户未开通 执行完毕********
+19-07-23 13:43 root         INFO     ****************查询总的可用借款额度接口结束****************
+19-07-23 13:43 root         INFO     ********************start
+19-07-23 13:43 root         INFO     the sql is : SELECT id from qydproduction.user where tel_num=%s
+19-07-23 13:43 root         INFO     the params is : 16803581610
+19-07-23 13:43 root         INFO     the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+19-07-23 13:43 root         INFO     816bb0ac-c302-4cc7-918a-cb91c30176ac
+19-07-23 13:43 root         INFO     the sql is :SELECT loan_id from mt_possession where user_id=%s
+19-07-23 13:43 root         INFO     the params is : 816bb0ac-c302-4cc7-918a-cb91c30176ac
+19-07-23 13:43 root         INFO     the result data is :[{'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
+19-07-23 13:43 root         INFO     end
+19-07-23 13:43 root         INFO     ****************JD查询企业信息接口开始****************
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase001_查询正常企业成功 执行开始********
+19-07-23 13:43 root         INFO     *******测试数据： 长沙市天心区祝博士教育信息咨询服务部
+19-07-23 13:43 root         INFO     *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=长沙市天心区祝博士教育信息咨询服务部&ssoId=1445898791152850915&platform=qyd
+19-07-23 13:43 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): ult-risk-control.dfb.com:80
+19-07-23 13:43 urllib3.connectionpool DEBUG    http://ult-risk-control.dfb.com:80 "GET /jd/credit/getEntBaseInfo?enterpriseName=%E9%95%BF%E6%B2%99%E5%B8%82%E5%A4%A9%E5%BF%83%E5%8C%BA%E7%A5%9D%E5%8D%9A%E5%A3%AB%E6%95%99%E8%82%B2%E4%BF%A1%E6%81%AF%E5%92%A8%E8%AF%A2%E6%9C%8D%E5%8A%A1%E9%83%A8&ssoId=1445898791152850915&platform=qyd HTTP/1.1" 200 991
+19-07-23 13:43 root         INFO     *******返回数据： {'code': 10000, 'data': {'shareHolderList': [], 'branchRecordList': [], 'alterRecordList': [], 'mainStaffInfo': [], 'basicInfo': {'regNo': '430103600258473', 'opScope': '教育咨询。（涉及许可审批的经营项目，凭许可证或审批文件方可经营）', 'dom': '长沙市天心区芙蓉南路一段758号和庄公寓4、5号栋B区106号。', 'entName': '长沙市天心区祝博士教育信息咨询服务部', 'city': '长沙市', 'county': '天心区', 'opTo': '', 'frName': '廖芳', 'entType': '个体工商户', 'creditCode': '', 'regCapCur': '', 'oldName': '', 'approvedTime': '2014-08-27', 'regCap': '', 'industryLargeName': '商务服务业', 'opFrom': '', 'industryPhyName': '租赁和商务服务业', 'industryMiddleName': '咨询与调查', 'esDate': '2014-08-27', 'orgCodes': '', 'regOrg': '长沙市工商行政管理局天心分局', 'validTime': '长期', 'entStatus': '存续（在营、开业、在册）', 'regOrgProvince': '湖南省', 'entBroadType': '个体'}}, 'msg': 'JD查询企业信息成功', 'successful': True}
+19-07-23 13:43 root         INFO     *******requests结果code:  10000     ,预期结果： 10000
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase001_查询正常企业成功 执行完毕********
+19-07-23 13:43 root         INFO     取得企业status内容:   存续（在营、开业、在册）
+19-07-23 13:43 root         INFO     ****************JD查询企业信息接口结束****************
+19-07-23 13:43 root         INFO     ****************JD查询企业信息接口开始****************
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase002_查询注销企业成功 执行开始********
+19-07-23 13:43 root         INFO     *******测试数据： 易门升凯商贸有限公司
+19-07-23 13:43 root         INFO     *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=易门升凯商贸有限公司&ssoId=1445898791152850915&platform=qyd
+19-07-23 13:43 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): ult-risk-control.dfb.com:80
+19-07-23 13:43 urllib3.connectionpool DEBUG    http://ult-risk-control.dfb.com:80 "GET /jd/credit/getEntBaseInfo?enterpriseName=%E6%98%93%E9%97%A8%E5%8D%87%E5%87%AF%E5%95%86%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&ssoId=1445898791152850915&platform=qyd HTTP/1.1" 200 2272
+19-07-23 13:43 root         INFO     *******返回数据： {'code': 10000, 'data': {'shareHolderList': [{'invType': '个人股东', 'subConAm': '350.0', 'canDate': '2014-01-09', 'conForm': '货币', 'shaName': '王晓英', 'fundedRatio': '70.00%'}, {'invType': '个人股东', 'subConAm': '150.0', 'canDate': '2014-01-09', 'conForm': '货币', 'shaName': '张占学', 'fundedRatio': '30.00%'}], 'branchRecordList': [], 'alterRecordList': [{'alterAf': '注销', 'alterBe': '存续（在营、开业、在册）', 'alterDate': '2018-04-28', 'alterItem': '经营状态'}, {'alterAf': '负责人：张占学;成员：王晓英;成员：薛兆明;', 'alterBe': '无', 'alterDate': '2018-03-06', 'alterItem': '分公司/分支机构备案'}, {'alterAf': '负责人：张占学;成员：王晓英;成员：薛兆明;', 'alterBe': '无', 'alterDate': '2018-03-06', 'alterItem': '清算组成员备案'}, {'alterAf': '薛兆明***', 'alterBe': '', 'alterDate': '2017-12-18', 'alterItem': '财务负责人'}], 'mainStaffInfo': [{'staffTypeName': '执行董事兼总经理', 'name': '张占学'}, {'staffTypeName': '监事', 'name': '王晓英'}], 'basicInfo': {'regNo': '530425100004260', 'opScope': '机械设备及配件、汽摩配件、五金交电、电子数码产品、文化用品、汽车装饰用品、服装面料、毛纺织品、计算机硬件、橡胶制品、化肥、化工原料及产品（不含危险品）、矿石及矿产品销售；货物及技术进出口贸易。（依法须经批准的项目，经相关部门批准后方可开展经营活动）', 'dom': '云南省玉溪市易门县龙泉镇龙泉西路花园小区10号商铺', 'entName': '易门升凯商贸有限公司', 'city': '玉溪市', 'county': '易门县', 'opTo': '2063-02-28', 'frName': '张占学', 'entType': '有限责任公司(自然人投资或控股)', 'creditCode': '91530425061583190F', 'regCapCur': '人民币', 'oldName': '', 'approvedTime': '2017-12-18', 'regCap': '500.000000万人民币', 'industryLargeName': '批发业', 'email': '无', 'opFrom': '2013-02-28', 'industryPhyName': '批发和零售业', 'industryMiddleName': '机械设备、五金产品及电子产品批发', 'esDate': '2013-02-28', 'orgCodes': '061583190', 'phoneNumber': '13908896725', 'regOrg': '易门县市场监督管理局', 'validTime': '2063-02-28', 'entStatus': '注销', 'regOrgProvince': '云南省', 'entBroadType': '企业'}}, 'msg': 'JD查询企业信息成功', 'successful': True}
+19-07-23 13:43 root         INFO     *******requests结果code:  10000     ,预期结果： 10000
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase002_查询注销企业成功 执行完毕********
+19-07-23 13:43 root         INFO     取得企业status内容:   注销
+19-07-23 13:43 root         INFO     ****************JD查询企业信息接口结束****************
+19-07-23 13:43 root         INFO     ****************JD查询企业信息接口开始****************
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase003_参数错误 执行开始********
+19-07-23 13:43 root         INFO     *******测试数据： 
+19-07-23 13:43 root         INFO     *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=&ssoId=1445898791152850915&platform=qyd
+19-07-23 13:43 urllib3.connectionpool DEBUG    Starting new HTTP connection (1): ult-risk-control.dfb.com:80
+19-07-23 13:43 urllib3.connectionpool DEBUG    http://ult-risk-control.dfb.com:80 "GET /jd/credit/getEntBaseInfo?enterpriseName=&ssoId=1445898791152850915&platform=qyd HTTP/1.1" 200 66
+19-07-23 13:43 root         INFO     *******返回数据： {'code': 50003, 'data': None, 'msg': '参数错误', 'successful': False}
+19-07-23 13:43 root         INFO     *******requests结果code:  50003     ,预期结果： 50003
+19-07-23 13:43 root         INFO     *******测试案例名称： TestCase003_参数错误 执行完毕********
+19-07-23 13:43 root         INFO     ****************JD查询企业信息接口结束****************
