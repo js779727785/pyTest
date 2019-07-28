@@ -18,6 +18,7 @@ def qydManageLogin():
     requests.packages.urllib3.disable_warnings()
     r=requests.get(url.qydManageLoginUrl,headers=headers,verify=False)
     result=r.json()
+    logger.info(result['data']['token'])
     return result['data']['token']
 
 def qydFrontLogin(username,passwd):
@@ -56,4 +57,5 @@ def qydFrontLogin(username,passwd):
 
 
 #qydFrontLogin('16820060113','che001')
-qydFrontLogin('16803581610','js12345678')
+# qydFrontLogin('16803581610','js12345678')
+qydManageLogin()

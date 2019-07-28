@@ -1,10 +1,10 @@
 #coding=utf-8
 import unittest
 import requests
-from Config.url import base_url as qyd
+from config.url import base_url as qyd
 from lib.generateTestCases import __generateTestCases
 from lib.log import logger
-from lib.userDataQuery import getSsoIdByCheckUserRole, getSsoIdByCheckUserRoleNotInXW, getSsoIdByBestsignBlack, \
+from lib.mysql.userDataQuery import getSsoIdByCheckUserRole, getSsoIdByCheckUserRoleNotInXW, getSsoIdByBestsignBlack, \
     getSsoIdByBestsignBlackNotIn
 
 headers = {"Content-type": "application/json"}
