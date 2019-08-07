@@ -58,4 +58,4 @@ def qydFrontLogin(username,passwd):
 
 #qydFrontLogin('16820060113','che001')
 # qydFrontLogin('16803581610','js12345678')
-qydManageLogin()
+# qydManageLogin()
