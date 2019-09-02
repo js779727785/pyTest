@@ -22,6 +22,8 @@ def dinvestmentDo(phone,pwd,Stramount,productType):
 #新众盈
 dinvestmentDo('16803581611','js123456','1','XZY')
 #新月盈
-# dinvestmentDo('16803581611','js123456','1','XYY')
-#月盈精选
-# dinvestmentDo('16803581611','js123456','1','QYB')
+dinvestmentDo('16803581611','js123456','1','XYY')
+# dinvestmentDo('16803581611','js123456','1.5','XYY')
+# dinvestmentDo('16803581611','js123456','2','XYY')
+#月盈精选,16822185848,16822181264
+dinvestmentDo('16803581611','js123456','1','QYB')

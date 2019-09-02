@@ -8,10 +8,8 @@ from  config.xw_url import NewPersonUrl
 
 """个人开通银行存管"""
 
-def regular():
+def regular(tel_num,password):
     """个人绑卡"""
-    tel_num='16855262500'
-    password='js123456'
     token =qydFrontLogin(tel_num,password)
     # token='2AJdf2aFa05gBJNbak3sXpkN3WJeexCfwl5iCO3Mjvhsq0Tkn5ZZ554C2C18A02qNOKHp'
     headers={"Content-Type": "application/json; charset=UTF-8", "X-Auth-Token": token}
@@ -29,4 +27,4 @@ def regular():
     # New_RegularRN_json =New_RegularRN.json()
     print(New_RegularRN)
 
-regular()
+regular(tel_num='16803582364',password='js123456')

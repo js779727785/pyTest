@@ -28,8 +28,8 @@ def register():
                 "payPassword": payPassword, "password":password }
         regrep=requests.post(url=qydregisterUrl,json=body).json()
         print(regrep)
-        logger.info("注册返回结果："+str(regrep))
         if str(regrep['successful'])=='True':
+            logger.info("注册返回结果："+str(regrep))
             logger.info("注册成功："+tel_num+","+password)
             return tel_num
 

@@ -7,7 +7,7 @@ class MySQLHelper(object):
 
     def __init__(self, dbName):
         if dbName == "paycenter":
-            self.conn = config.qydNewpaycenter
+            self.conn = config.paycenter
         elif dbName == "qydproduction":
             self.conn = config.qyddb_QA
         elif dbName == "qydnewproduction":

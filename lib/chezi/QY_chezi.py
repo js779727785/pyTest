@@ -20,5 +20,6 @@ def QY_chezi(phone,pwd,Stramount,productType):
     # print(re)
     logger.info("请求结果："+str(re))
 #轻盈
-QY_chezi('16803581611','js123456','1','QY')
-
+# QY_chezi('16803581611','js123456','1','QY')
+# QY_chezi('16803581611','js123456','1.5','QY')
+# QY_chezi('16803581611','js123456','2','QY')

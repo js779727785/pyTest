@@ -1,5 +1,6 @@
 import random
 from lib.common.getUserName import GetUserName
+from lib.common import register
 
 #randrange生成5位随机数
 def demorandrange():
@@ -11,5 +12,8 @@ def demorandrange():
 def user_name():
     user_name=GetUserName.full_name()
     print(user_name)
+def test():
+    tel_num=register.register()
+    print(tel_num)
 
-user_name()
+test()
