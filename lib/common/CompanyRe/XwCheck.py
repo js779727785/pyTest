@@ -24,17 +24,20 @@ def XwCheckUi(tel_num):
     if xw_id is not None:
         logger.info("*******新网审核中,企业用户手机号：" + str(tel_num) + " 新网用户编号：" + str(
             xw_id[0]['xw_id']))
-    xw_url = "http://47.94.123.201:9000/lanmao-boss-app-pt/login"
-    driver.get(xw_url)
-    username = 'lmservice'
-    password = 'lmservice'
-    driver.find_element_by_id("name").send_keys(username)
-    driver.find_element_by_id("password").send_keys(password, Keys.ENTER)
-    driver.find_element_by_xpath("//*[@id=\"portal\"]/div/div/a/span").click()
-    driver.find_element_by_xpath("//*[@id=\"menu_toggle\"]/i").click()
-    driver.find_element_by_xpath("//*[@id=\"sidebar-menu\"]/div/ul/li/a/i").click()
-    driver.find_element_by_xpath("//*[@id=\"sidebar-menu\"]/div/ul/li/ul/li[1]/a").click()
-    driver.find_element_by_xpath("//input[@data-parsley-length='[3, 20]']").send_keys("6000003832")
-    driver.find_element_by_xpath("//input[@data-parsley-length='[0, 100]']").send_keys(str(xw_id[0]['xw_id']), Keys.ENTER)
-    logger.info(str(tel_num)+"——————新网审核成功,去前台登录查看吧！——————")
-# XwCheckUi('16803581611')
+        xw_url = "http://47.94.123.201:9000/lanmao-boss-app-pt/login"
+        driver.get(xw_url)
+        username = 'lmservice'
+        password = 'lmservice'
+        driver.find_element_by_id("name").send_keys(username)
+        driver.find_element_by_id("password").send_keys(password, Keys.ENTER)
+        driver.find_element_by_xpath("//*[@id=\"portal\"]/div/div/a/span").click()
+        driver.find_element_by_xpath("//*[@id=\"menu_toggle\"]/i").click()
+        driver.find_element_by_xpath("//*[@id=\"sidebar-menu\"]/div/ul/li/a/i").click()
+        driver.find_element_by_xpath("//*[@id=\"sidebar-menu\"]/div/ul/li/ul/li[1]/a").click()
+        driver.find_element_by_xpath("//input[@data-parsley-length='[3, 20]']").send_keys("6000003832")
+        driver.find_element_by_xpath("//input[@data-parsley-length='[0, 100]']").send_keys(str(xw_id[0]['xw_id']),                                                                                         Keys.ENTER)
+        logger.info(str(tel_num) + "——————新网审核成功,去前台登录查看吧！——————")
+    else:
+        logger.error("———xw_id is None!!!!")
+
+# XwCheckUi('16803589912')
