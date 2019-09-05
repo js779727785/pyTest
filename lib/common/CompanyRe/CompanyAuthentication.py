@@ -7,7 +7,7 @@ from lib.common import register,IDcard,DemoLogin
 from lib.common.getUserName import GetUserName
 
 
-"""企业开通存管第一步:注册+提交审核并审批通过----Jmelody"""
+"""企业开通存管第一步:注册+实名认证提交审核----Jmelody"""
 def companyauthentication(tel_num):
     if tel_num is not None:
         logger.info("******注册手机号码：" + str(tel_num))
@@ -50,7 +50,6 @@ def companyauthentication(tel_num):
         Refercompany = requests.post(url=xw_url.Companyauthentication,json=body_cp,headers=headers1)
         Refercompany_json=Refercompany.json()
         logger.info("响应数据:"+str(Refercompany))
-        """垫付宝后台进行企业审核：认领任务"""
         if Refercompany_json['successful'] == True:
             logger.info("====轻易贷实名信息提交成功====,return手机号为:"+str(tel_num))
             return tel_num

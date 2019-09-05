@@ -38,6 +38,8 @@ def dakuan(tel_num,pendingConfirm):
         company_remit_record=MySQLHelper("qydproduction").get_many(query_record,transfer_id)
         if company_remit_record is not None:
             logger.info("company_remit_record:  " + str(company_remit_record))
+            """库表更新后需要重新查一遍状态"""
+            query_info = MySQLHelper("qydproduction").get_many(query_info_sql, tel_num)
             status = query_info[0]['status']
             if status=='REMIT_SUCCESS':
                 logger.info("----打款成功,账户状态为:"+str(status))

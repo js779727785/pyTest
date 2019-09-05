@@ -50,8 +50,8 @@ def checkCompany(tel_num):
                     "maskPasswordAgain": "",
                     "smsCode": "000000",
                     "randomNumPass": "",
-                    "password": "121212",
-                    "confirmPassword": "121212",
+                    "password": "js12345678",
+                    "confirmPassword": "js12345678",
                     "bankCode": "ICBK",
                     "maskPassword": "",
                     "amount": "10000000",
@@ -64,11 +64,10 @@ def checkCompany(tel_num):
                 logger.info("******企业用户在新网填写信息" + str(RegisterEnterprisebody))
                 requests.post(url=xw_url.XWregisterEnterpriseurl, data=RegisterEnterprisebody,
                               headers=headers2)
-
+                time.sleep(5)
                 xw_id_sql = 'select xw_id from xw_user_role WHERE user_id=(SELECT id FROM user WHERE tel_num="' + str(
                     tel_num) + '");'
                 xw_id = MySQLHelper('qydproduction').selectsql(xw_id_sql)
-                time.sleep(5)
                 if xw_id is not None:
                     logger.info("*******新网审核中,企业用户手机号：" + str(tel_num) + " 新网用户编号：" + str(
                         xw_id[0]['xw_id']))
