@@ -4,7 +4,7 @@ lst = os.listdir(os.getcwd())
 
 for c in lst:
     if os.path.isfile(c) and c.endswith('.py') and c.find("AllTest") == -1 :  # 去掉AllTest.py文件
-    # if os.path.isfile(c) and c.endswith('QY_chezi.py'):  # 去掉AllTest.py文件
+    # if os.path.isfile(c) and c.endswith('QY_chezi.py'):  # 只取QY_chezi.py文件
         print(c)
         i=0
         while i<10:

@@ -76,7 +76,8 @@ class MySQLHelper(object):
         conn.commit()
         cur.close()
         conn.close()
-        return u'更新数据库成功'
+        logger.info("更新数据库成功")
+        return '更新数据库成功'
 
     def update_oneLine (self, sql, params):
         conn = pymysql.connect(**self.conn)

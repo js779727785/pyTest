@@ -36,3 +36,13 @@ def checkGetMany2():
     if resultInfo is not None or resultInfo.__len__()>0:
         for i in range(resultInfo.__len__()):
             self.assertEquals(resultInfo[i]["sqlStatus"], testdata[0]['exceptStatus'])
+
+def gogo():
+    """用python编程，从屏幕上输入一个字符串，将这个字符串里面所有不同的字符提取出来，放在一个字符数组里面"""
+    str = 'today I will go home'
+    list = []
+    for i in str:
+        print(str.count(i))
+        if str.count(i) == 1:
+            list.append(i)
+    print(list)
