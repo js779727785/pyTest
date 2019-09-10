@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>demoreport自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-07-23 13:43:26</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.942688</p>
-<p class='attribute'><strong>Status:</strong> Pass 7 Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-09-10 16:40:27</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:16.069264</p>
+<p class='attribute'><strong>Status:</strong> Pass 5 Error 4</p>
 
 <p class='description'>demoreport——description</p>
 </div>
@@ -249,20 +249,20 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-pt1.1: 2019-07-23 13:43:26,896 - root - INFO - ****************查询总的可用借款额度接口开始****************
-2019-07-23 13:43:26,920 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
-2019-07-23 13:43:26,921 - root - INFO - the params is : 16803581610
-2019-07-23 13:43:26,928 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
-2019-07-23 13:43:26,928 - root - INFO - 816bb0ac-c302-4cc7-918a-cb91c30176ac
-2019-07-23 13:43:26,929 - root - INFO - *******测试案例名称： TestCase001_查询成功 执行开始********
-2019-07-23 13:43:26,930 - root - INFO - *******测试数据： {'userId': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
-2019-07-23 13:43:26,930 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
-2019-07-23 13:43:27,207 - root - INFO - *******返回数据： {'code': 10000, 'data': {'allUserdBorrowLine': 8000.34, 'availableBorrowLine': 191999.66, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}, 'msg': 'SUCCESS'}
-2019-07-23 13:43:27,208 - root - INFO - *******requests结果code:  10000     ,预期结果： 10000
-2019-07-23 13:43:27,209 - root - INFO - *******测试案例名称： TestCase001_查询成功 执行完毕********
-查询结果:   {'allUserdBorrowLine': 8000.34, 'availableBorrowLine': 191999.66, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}
-2019-07-23 13:43:27,211 - root - INFO - 查询结果:   191999.66
-2019-07-23 13:43:27,212 - root - INFO - ****************查询总的可用借款额度接口结束****************
+pt1.1: 2019-09-10 16:40:27,082 - root - INFO - ****************查询总的可用借款额度接口开始****************
+2019-09-10 16:40:27,106 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-09-10 16:40:27,106 - root - INFO - the params is : 16803581610
+2019-09-10 16:40:27,112 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+2019-09-10 16:40:27,112 - root - INFO - 816bb0ac-c302-4cc7-918a-cb91c30176ac
+2019-09-10 16:40:27,113 - root - INFO - *******测试案例名称： TestCase001_查询成功 执行开始********
+2019-09-10 16:40:27,113 - root - INFO - *******测试数据： {'userId': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+2019-09-10 16:40:27,114 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+2019-09-10 16:40:28,061 - root - INFO - *******返回数据： {'code': 10000, 'data': {'allUserdBorrowLine': 198894.55, 'availableBorrowLine': 1105.45, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}, 'msg': 'SUCCESS'}
+2019-09-10 16:40:28,063 - root - INFO - *******requests结果code:  10000     ,预期结果： 10000
+2019-09-10 16:40:28,065 - root - INFO - *******测试案例名称： TestCase001_查询成功 执行完毕********
+查询结果:   {'allUserdBorrowLine': 198894.55, 'availableBorrowLine': 1105.45, 'oldYueYingUserdBorrowLine': 0, 'companyLimitAmount': 1000000, 'personLimitAmount': 200000}
+2019-09-10 16:40:28,067 - root - INFO - 查询结果:   1105.45
+2019-09-10 16:40:28,068 - root - INFO - ****************查询总的可用借款额度接口结束****************
 
 
         </pre>
@@ -287,17 +287,17 @@ pt1.1: 2019-07-23 13:43:26,896 - root - INFO - ****************查询总的可�
         </div>
         <pre>
         
-pt1.2: 2019-07-23 13:43:27,214 - root - INFO - ****************查询总的可用借款额度接口开始****************
-2019-07-23 13:43:27,233 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
-2019-07-23 13:43:27,234 - root - INFO - the params is : 19903581120
-2019-07-23 13:43:27,242 - root - INFO - the result data is :None
-2019-07-23 13:43:27,243 - root - INFO - *******测试案例名称： TestCase002_用户不存在 执行开始********
-2019-07-23 13:43:27,245 - root - INFO - *******测试数据： {}
-2019-07-23 13:43:27,246 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
-2019-07-23 13:43:27,395 - root - INFO - *******返回数据： {'code': 11017, 'msg': '用户ID为空'}
-2019-07-23 13:43:27,396 - root - INFO - *******requests结果code:  11017     ,预期结果： 11017
-2019-07-23 13:43:27,397 - root - INFO - *******测试案例名称： TestCase002_用户不存在 执行完毕********
-2019-07-23 13:43:27,397 - root - INFO - ****************查询总的可用借款额度接口结束****************
+pt1.2: 2019-09-10 16:40:28,070 - root - INFO - ****************查询总的可用借款额度接口开始****************
+2019-09-10 16:40:28,096 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-09-10 16:40:28,098 - root - INFO - the params is : 19903581120
+2019-09-10 16:40:28,106 - root - INFO - the result data is :None
+2019-09-10 16:40:28,108 - root - INFO - *******测试案例名称： TestCase002_用户不存在 执行开始********
+2019-09-10 16:40:28,109 - root - INFO - *******测试数据： {}
+2019-09-10 16:40:28,111 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+2019-09-10 16:40:28,191 - root - INFO - *******返回数据： {'code': 11017, 'msg': '用户ID为空'}
+2019-09-10 16:40:28,193 - root - INFO - *******requests结果code:  11017     ,预期结果： 11017
+2019-09-10 16:40:28,195 - root - INFO - *******测试案例名称： TestCase002_用户不存在 执行完毕********
+2019-09-10 16:40:28,197 - root - INFO - ****************查询总的可用借款额度接口结束****************
 
 
         </pre>
@@ -322,18 +322,62 @@ pt1.2: 2019-07-23 13:43:27,214 - root - INFO - ****************查询总的可�
         </div>
         <pre>
         
-pt1.3: 2019-07-23 13:43:27,398 - root - INFO - ****************查询总的可用借款额度接口开始****************
-2019-07-23 13:43:27,423 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
-2019-07-23 13:43:27,425 - root - INFO - the params is : 19903581111
-2019-07-23 13:43:27,432 - root - INFO - the result data is :{'id': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
-2019-07-23 13:43:27,433 - root - INFO - b011567f-b0fd-4b77-9827-ad2d26b303d4
-2019-07-23 13:43:27,435 - root - INFO - *******测试案例名称： TestCase003_借款存管户未开通 执行开始********
-2019-07-23 13:43:27,437 - root - INFO - *******测试数据： {'userId': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
-2019-07-23 13:43:27,439 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
-2019-07-23 13:43:27,598 - root - INFO - *******返回数据： {'code': 10020, 'msg': '借款存管户未开通'}
-2019-07-23 13:43:27,600 - root - INFO - *******requests结果code:  10020     ,预期结果： 10020
-2019-07-23 13:43:27,602 - root - INFO - *******测试案例名称： TestCase003_借款存管户未开通 执行完毕********
-2019-07-23 13:43:27,604 - root - INFO - ****************查询总的可用借款额度接口结束****************
+pt1.3: 2019-09-10 16:40:28,198 - root - INFO - ****************查询总的可用借款额度接口开始****************
+2019-09-10 16:40:28,229 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-09-10 16:40:28,231 - root - INFO - the params is : 19903581111
+2019-09-10 16:40:28,237 - root - INFO - the result data is :{'id': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+2019-09-10 16:40:28,239 - root - INFO - b011567f-b0fd-4b77-9827-ad2d26b303d4
+2019-09-10 16:40:28,241 - root - INFO - *******测试案例名称： TestCase003_借款存管户未开通 执行开始********
+2019-09-10 16:40:28,243 - root - INFO - *******测试数据： {'userId': 'b011567f-b0fd-4b77-9827-ad2d26b303d4'}
+2019-09-10 16:40:28,244 - root - INFO - *******测试url： http://azure-www.qingyidai.com/nbigfront/loan/queryavailableline
+2019-09-10 16:40:29,375 - root - INFO - *******返回数据： {'code': 10020, 'msg': '借款存管户未开通'}
+2019-09-10 16:40:29,377 - root - INFO - *******requests结果code:  10020     ,预期结果： 10020
+2019-09-10 16:40:29,378 - root - INFO - *******测试案例名称： TestCase003_借款存管户未开通 执行完毕********
+2019-09-10 16:40:29,380 - root - INFO - ****************查询总的可用借款额度接口结束****************
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>cancleQY.Test_cancleQY: 取消撤资------Jmelody</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Test_cancleQY_001</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 2019-09-10 16:40:29,382 - root - INFO - ********************************************************************************
+2019-09-10 16:40:29,384 - root - INFO - ****************Test_cancleQY接口开始****************
+2019-09-10 16:40:29,385 - root - INFO - *******测试案例名称： TestCase001_取消撤资QY成功 执行开始********
+2019-09-10 16:40:29,410 - root - INFO - the sql is :select * from mt_assignment where user_id=(select id from user where tel_num=%s) and `status`='OPEN' and (amount-already_amount-match_amount)!=0 ORDER BY create_time desc;
+2019-09-10 16:40:29,411 - root - INFO - the params is : 16803581611
+2019-09-10 16:40:29,425 - root - INFO - the result data is :()
+2019-09-10 16:40:29,426 - root - INFO - 撤资数据:()
+2019-09-10 16:40:29,426 - root - INFO - 无处理中的撤资数据！！！
+2019-09-10 16:40:29,427 - root - INFO - *******测试案例名称： TestCase001_取消撤资QY成功 执行完毕********
+2019-09-10 16:40:29,428 - root - INFO - ****************Test_cancleQY接口结束****************
+2019-09-10 16:40:29,429 - root - INFO - ********************************************************************************
 
 
         </pre>
@@ -344,39 +388,48 @@ pt1.3: 2019-07-23 13:43:27,398 - root - INFO - ****************查询总的可�
 </tr>
 
 <tr class='errorClass'>
-    <td>unittest.loader._FailedTest</td>
+    <td>demojuhe.juhe</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
     <td>1</td>
-    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
 </tr>
 
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>demojuhe</div></td>
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_juhe_000</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
         error</a>
 
-    <div id='div_ft2.1' class="popup_window">
+    <div id='div_ft3.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.1: ImportError: Failed to import test module: demojuhe
+ft3.1: 2019-09-10 16:40:29,430 - root - INFO - **********start
+2019-09-10 16:40:29,431 - root - INFO - sheet case start
+2019-09-10 16:40:42,942 - root - INFO - ***end***
 Traceback (most recent call last):
-  File "C:\Program Files\Python\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "C:\Program Files\Python\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "D:\myapp\pyTest\test\testcase\demoreport\demojuhe.py", line 4, in &lt;module&gt;
-    from config.demoUrl import base_url
-ImportError: cannot import name 'base_url' from 'config.demoUrl' (D:\myapp\pyTest\config\demoUrl.py)
-
+  File "D:\myapp\pyTest\test\testcase\demoreport\demojuhe.py", line 40, in func
+    self.getTest(arg1)
+  File "D:\myapp\pyTest\test\testcase\demoreport\demojuhe.py", line 25, in getTest
+    token=qydFrontLogin('16803581610','js12345678')
+  File "D:\myapp\pyTest\lib\common\DemoLogin.py", line 53, in qydFrontLogin
+    result=r.json()
+  File "D:\myapp\apiGateWay\venv\lib\site-packages\requests\models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Program Files\Python\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 
         </pre>
@@ -392,55 +445,11 @@ ImportError: cannot import name 'base_url' from 'config.demoUrl' (D:\myapp\pyTes
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
-</tr>
-
-<tr id='pt3.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_queryMtPossession</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
-        pass</a>
-
-    <div id='div_pt3.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt3.1: 2019-07-23 13:43:27,607 - root - INFO - ********************start
-2019-07-23 13:43:27,632 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
-2019-07-23 13:43:27,633 - root - INFO - the params is : 16803581610
-2019-07-23 13:43:27,638 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
-2019-07-23 13:43:27,639 - root - INFO - 816bb0ac-c302-4cc7-918a-cb91c30176ac
-2019-07-23 13:43:27,663 - root - INFO - the sql is :SELECT loan_id from mt_possession where user_id=%s
-2019-07-23 13:43:27,664 - root - INFO - the params is : 816bb0ac-c302-4cc7-918a-cb91c30176ac
-2019-07-23 13:43:27,680 - root - INFO - the result data is :[{'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
-[{'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
-60a72ada-ad5f-4dac-ab2a-47ca7731dd7b
-2019-07-23 13:43:27,681 - root - INFO - end
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr class='passClass'>
-    <td>queryQy.queryQy: JD查询企业信息---Jmelody</td>
-    <td>3</td>
-    <td>3</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c4',3)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
 </tr>
 
 <tr id='pt4.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_queryQy_001</div></td>
+    <td class='none'><div class='testcase'>test_queryMtPossession</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -454,16 +463,17 @@ pt3.1: 2019-07-23 13:43:27,607 - root - INFO - ********************start
         </div>
         <pre>
         
-pt4.1: 2019-07-23 13:43:27,682 - root - INFO - ****************JD查询企业信息接口开始****************
-2019-07-23 13:43:27,683 - root - INFO - *******测试案例名称： TestCase001_查询正常企业成功 执行开始********
-2019-07-23 13:43:27,684 - root - INFO - *******测试数据： 长沙市天心区祝博士教育信息咨询服务部
-2019-07-23 13:43:27,685 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=长沙市天心区祝博士教育信息咨询服务部&amp;ssoId=1445898791152850915&amp;platform=qyd
-2019-07-23 13:43:27,733 - root - INFO - *******返回数据： {'code': 10000, 'data': {'shareHolderList': [], 'branchRecordList': [], 'alterRecordList': [], 'mainStaffInfo': [], 'basicInfo': {'regNo': '430103600258473', 'opScope': '教育咨询。（涉及许可审批的经营项目，凭许可证或审批文件方可经营）', 'dom': '长沙市天心区芙蓉南路一段758号和庄公寓4、5号栋B区106号。', 'entName': '长沙市天心区祝博士教育信息咨询服务部', 'city': '长沙市', 'county': '天心区', 'opTo': '', 'frName': '廖芳', 'entType': '个体工商户', 'creditCode': '', 'regCapCur': '', 'oldName': '', 'approvedTime': '2014-08-27', 'regCap': '', 'industryLargeName': '商务服务业', 'opFrom': '', 'industryPhyName': '租赁和商务服务业', 'industryMiddleName': '咨询与调查', 'esDate': '2014-08-27', 'orgCodes': '', 'regOrg': '长沙市工商行政管理局天心分局', 'validTime': '长期', 'entStatus': '存续（在营、开业、在册）', 'regOrgProvince': '湖南省', 'entBroadType': '个体'}}, 'msg': 'JD查询企业信息成功', 'successful': True}
-2019-07-23 13:43:27,736 - root - INFO - *******requests结果code:  10000     ,预期结果： 10000
-2019-07-23 13:43:27,737 - root - INFO - *******测试案例名称： TestCase001_查询正常企业成功 执行完毕********
-取得企业status内容:   存续（在营、开业、在册）
-2019-07-23 13:43:27,739 - root - INFO - 取得企业status内容:   存续（在营、开业、在册）
-2019-07-23 13:43:27,741 - root - INFO - ****************JD查询企业信息接口结束****************
+pt4.1: 2019-09-10 16:40:42,948 - root - INFO - ********************start
+2019-09-10 16:40:42,975 - root - INFO - the sql is : SELECT id from qydproduction.user where tel_num=%s
+2019-09-10 16:40:42,976 - root - INFO - the params is : 16803581610
+2019-09-10 16:40:42,982 - root - INFO - the result data is :{'id': '816bb0ac-c302-4cc7-918a-cb91c30176ac'}
+2019-09-10 16:40:42,983 - root - INFO - 816bb0ac-c302-4cc7-918a-cb91c30176ac
+2019-09-10 16:40:43,009 - root - INFO - the sql is :SELECT loan_id from mt_possession where user_id=%s
+2019-09-10 16:40:43,010 - root - INFO - the params is : 816bb0ac-c302-4cc7-918a-cb91c30176ac
+2019-09-10 16:40:43,018 - root - INFO - the result data is :[{'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '1d02d713-0930-447c-af60-dca614ba83e2'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '9127fa58-56f1-4671-89fb-3c3dbc7f264e'}, {'loan_id': '44748eaf-6ca7-4916-8e53-023197e15d18'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': 'a74e1fa6-6537-4651-9eb8-9bb7157da6c2'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '25be0689-e0a3-499d-b4b2-957e44ec4825'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': '549462e8-68bc-4370-b119-30450c1b1a9b'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
+[{'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '073e47c0-f0cf-4002-8f71-6f2f660b447d'}, {'loan_id': '1d02d713-0930-447c-af60-dca614ba83e2'}, {'loan_id': '207658ea-7e6a-4b35-b330-d90aa47a6043'}, {'loan_id': 'a1bf663a-f192-4e1c-8883-ddef00adf4ed'}, {'loan_id': '3c24a8a3-4671-4058-9fa8-b4d0d52a3559'}, {'loan_id': 'f7410f3d-adb2-466d-a6b1-dbcd662028a1'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '9127fa58-56f1-4671-89fb-3c3dbc7f264e'}, {'loan_id': '44748eaf-6ca7-4916-8e53-023197e15d18'}, {'loan_id': 'ee90f023-f5fd-460e-bd01-af9b53a2a3f1'}, {'loan_id': 'a74e1fa6-6537-4651-9eb8-9bb7157da6c2'}, {'loan_id': '60a72ada-ad5f-4dac-ab2a-47ca7731dd7b'}, {'loan_id': '0d2c3739-1d56-4122-ae54-822a0b9b66ca'}, {'loan_id': '25be0689-e0a3-499d-b4b2-957e44ec4825'}, {'loan_id': '926a0cf5-cbbc-42c3-832c-8a366fc9cbce'}, {'loan_id': '14430011-2008-497c-9e91-3ecbd99da9b4'}, {'loan_id': '70c1d38e-01f3-4cac-b8c7-6d9122ad55b9'}, {'loan_id': '544d9cdf-687c-47ec-ba35-de0b35ba2555'}, {'loan_id': 'c7468ddb-4901-40fa-b621-15e74bd820c1'}, {'loan_id': '549462e8-68bc-4370-b119-30450c1b1a9b'}, {'loan_id': 'a38ee8bc-b9fe-4b79-8279-58cdaa138d28'}]
+60a72ada-ad5f-4dac-ab2a-47ca7731dd7b
+2019-09-10 16:40:43,020 - root - INFO - end
 
 
         </pre>
@@ -473,31 +483,49 @@ pt4.1: 2019-07-23 13:43:27,682 - root - INFO - ****************JD查询企业信
     </td>
 </tr>
 
-<tr id='pt4.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_queryQy_002</div></td>
+<tr class='errorClass'>
+    <td>queryQy.queryQy: JD查询企业信息---Jmelody</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td>3</td>
+    <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
+</tr>
+
+<tr id='ft5.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_queryQy_001</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.1')" >
+        error</a>
 
-    <div id='div_pt4.2' class="popup_window">
+    <div id='div_ft5.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt4.2: 2019-07-23 13:43:27,743 - root - INFO - ****************JD查询企业信息接口开始****************
-2019-07-23 13:43:27,745 - root - INFO - *******测试案例名称： TestCase002_查询注销企业成功 执行开始********
-2019-07-23 13:43:27,747 - root - INFO - *******测试数据： 易门升凯商贸有限公司
-2019-07-23 13:43:27,748 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=易门升凯商贸有限公司&amp;ssoId=1445898791152850915&amp;platform=qyd
-2019-07-23 13:43:27,796 - root - INFO - *******返回数据： {'code': 10000, 'data': {'shareHolderList': [{'invType': '个人股东', 'subConAm': '350.0', 'canDate': '2014-01-09', 'conForm': '货币', 'shaName': '王晓英', 'fundedRatio': '70.00%'}, {'invType': '个人股东', 'subConAm': '150.0', 'canDate': '2014-01-09', 'conForm': '货币', 'shaName': '张占学', 'fundedRatio': '30.00%'}], 'branchRecordList': [], 'alterRecordList': [{'alterAf': '注销', 'alterBe': '存续（在营、开业、在册）', 'alterDate': '2018-04-28', 'alterItem': '经营状态'}, {'alterAf': '负责人：张占学;成员：王晓英;成员：薛兆明;', 'alterBe': '无', 'alterDate': '2018-03-06', 'alterItem': '分公司/分支机构备案'}, {'alterAf': '负责人：张占学;成员：王晓英;成员：薛兆明;', 'alterBe': '无', 'alterDate': '2018-03-06', 'alterItem': '清算组成员备案'}, {'alterAf': '薛兆明***', 'alterBe': '', 'alterDate': '2017-12-18', 'alterItem': '财务负责人'}], 'mainStaffInfo': [{'staffTypeName': '执行董事兼总经理', 'name': '张占学'}, {'staffTypeName': '监事', 'name': '王晓英'}], 'basicInfo': {'regNo': '530425100004260', 'opScope': '机械设备及配件、汽摩配件、五金交电、电子数码产品、文化用品、汽车装饰用品、服装面料、毛纺织品、计算机硬件、橡胶制品、化肥、化工原料及产品（不含危险品）、矿石及矿产品销售；货物及技术进出口贸易。（依法须经批准的项目，经相关部门批准后方可开展经营活动）', 'dom': '云南省玉溪市易门县龙泉镇龙泉西路花园小区10号商铺', 'entName': '易门升凯商贸有限公司', 'city': '玉溪市', 'county': '易门县', 'opTo': '2063-02-28', 'frName': '张占学', 'entType': '有限责任公司(自然人投资或控股)', 'creditCode': '91530425061583190F', 'regCapCur': '人民币', 'oldName': '', 'approvedTime': '2017-12-18', 'regCap': '500.000000万人民币', 'industryLargeName': '批发业', 'email': '无', 'opFrom': '2013-02-28', 'industryPhyName': '批发和零售业', 'industryMiddleName': '机械设备、五金产品及电子产品批发', 'esDate': '2013-02-28', 'orgCodes': '061583190', 'phoneNumber': '13908896725', 'regOrg': '易门县市场监督管理局', 'validTime': '2063-02-28', 'entStatus': '注销', 'regOrgProvince': '云南省', 'entBroadType': '企业'}}, 'msg': 'JD查询企业信息成功', 'successful': True}
-2019-07-23 13:43:27,797 - root - INFO - *******requests结果code:  10000     ,预期结果： 10000
-2019-07-23 13:43:27,798 - root - INFO - *******测试案例名称： TestCase002_查询注销企业成功 执行完毕********
-取得企业status内容:   注销
-2019-07-23 13:43:27,799 - root - INFO - 取得企业status内容:   注销
-2019-07-23 13:43:27,800 - root - INFO - ****************JD查询企业信息接口结束****************
+ft5.1: 2019-09-10 16:40:43,021 - root - INFO - ****************JD查询企业信息接口开始****************
+2019-09-10 16:40:43,022 - root - INFO - *******测试案例名称： TestCase001_查询正常企业成功 执行开始********
+2019-09-10 16:40:43,023 - root - INFO - *******测试数据： 长沙市天心区祝博士教育信息咨询服务部
+2019-09-10 16:40:43,024 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=长沙市天心区祝博士教育信息咨询服务部&amp;ssoId=1445898791152850915&amp;platform=qyd
+2019-09-10 16:40:43,049 - root - INFO - ****************JD查询企业信息接口结束****************
+Traceback (most recent call last):
+  File "D:\myapp\pyTest\test\testcase\demoreport\queryQy.py", line 50, in func
+    self.getTest(arg1)
+  File "D:\myapp\pyTest\test\testcase\demoreport\queryQy.py", line 37, in getTest
+    result = r.json()
+  File "D:\myapp\apiGateWay\venv\lib\site-packages\requests\models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Program Files\Python\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 
         </pre>
@@ -507,29 +535,83 @@ pt4.2: 2019-07-23 13:43:27,743 - root - INFO - ****************JD查询企业信
     </td>
 </tr>
 
-<tr id='pt4.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_queryQy_003</div></td>
+<tr id='ft5.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_queryQy_002</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.2')" >
+        error</a>
 
-    <div id='div_pt4.3' class="popup_window">
+    <div id='div_ft5.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt4.3: 2019-07-23 13:43:27,801 - root - INFO - ****************JD查询企业信息接口开始****************
-2019-07-23 13:43:27,802 - root - INFO - *******测试案例名称： TestCase003_参数错误 执行开始********
-2019-07-23 13:43:27,803 - root - INFO - *******测试数据： 
-2019-07-23 13:43:27,803 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=&amp;ssoId=1445898791152850915&amp;platform=qyd
-2019-07-23 13:43:27,835 - root - INFO - *******返回数据： {'code': 50003, 'data': None, 'msg': '参数错误', 'successful': False}
-2019-07-23 13:43:27,836 - root - INFO - *******requests结果code:  50003     ,预期结果： 50003
-2019-07-23 13:43:27,837 - root - INFO - *******测试案例名称： TestCase003_参数错误 执行完毕********
-2019-07-23 13:43:27,838 - root - INFO - ****************JD查询企业信息接口结束****************
+ft5.2: 2019-09-10 16:40:43,050 - root - INFO - ****************JD查询企业信息接口开始****************
+2019-09-10 16:40:43,051 - root - INFO - *******测试案例名称： TestCase002_查询注销企业成功 执行开始********
+2019-09-10 16:40:43,051 - root - INFO - *******测试数据： 易门升凯商贸有限公司
+2019-09-10 16:40:43,052 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=易门升凯商贸有限公司&amp;ssoId=1445898791152850915&amp;platform=qyd
+2019-09-10 16:40:43,075 - root - INFO - ****************JD查询企业信息接口结束****************
+Traceback (most recent call last):
+  File "D:\myapp\pyTest\test\testcase\demoreport\queryQy.py", line 50, in func
+    self.getTest(arg1)
+  File "D:\myapp\pyTest\test\testcase\demoreport\queryQy.py", line 37, in getTest
+    result = r.json()
+  File "D:\myapp\apiGateWay\venv\lib\site-packages\requests\models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Program Files\Python\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_queryQy_003</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.3')" >
+        error</a>
+
+    <div id='div_ft5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.3: 2019-09-10 16:40:43,076 - root - INFO - ****************JD查询企业信息接口开始****************
+2019-09-10 16:40:43,076 - root - INFO - *******测试案例名称： TestCase003_参数错误 执行开始********
+2019-09-10 16:40:43,077 - root - INFO - *******测试数据： 
+2019-09-10 16:40:43,077 - root - INFO - *******测试url： http://ult-risk-control.dfb.com/jd/credit/getEntBaseInfo?enterpriseName=&amp;ssoId=1445898791152850915&amp;platform=qyd
+2019-09-10 16:40:43,150 - root - INFO - ****************JD查询企业信息接口结束****************
+Traceback (most recent call last):
+  File "D:\myapp\pyTest\test\testcase\demoreport\queryQy.py", line 50, in func
+    self.getTest(arg1)
+  File "D:\myapp\pyTest\test\testcase\demoreport\queryQy.py", line 37, in getTest
+    result = r.json()
+  File "D:\myapp\apiGateWay\venv\lib\site-packages\requests\models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Program Files\Python\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 
         </pre>
@@ -541,10 +623,10 @@ pt4.3: 2019-07-23 13:43:27,801 - root - INFO - ****************JD查询企业信
 
 <tr id='total_row'>
     <td class="fonts">Total</td>
-    <td class="fonts">8</td>
-    <td class="fonts" class="text text-success">7</td>
+    <td class="fonts">9</td>
+    <td class="fonts" class="text text-success">5</td>
     <td class="fonts" class="text text-danger">0</td>
-    <td class="fonts" class="text text-warning">1</td>
+    <td class="fonts" class="text text-warning">4</td>
     <td>&nbsp;</td>
 </tr>
 </table>
