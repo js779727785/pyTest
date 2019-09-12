@@ -29,3 +29,4 @@ fp.close()
 time.sleep(3)
 
 send_email.send_mail_report("*****demoreport自动化测试报告*****")
+

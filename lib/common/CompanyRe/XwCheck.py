@@ -19,7 +19,7 @@ from lib.log import logger
 
 def XwCheckUi(tel_num):
     xw_id_sql = 'select xw_id from xw_user_role WHERE user_id=(SELECT id FROM user WHERE tel_num="' + str(
-        tel_num) + '");'
+        tel_num) + 'ORDER BY createtime desc");'
     xw_id = MySQLHelper('qydproduction').selectsql(xw_id_sql)
     if xw_id is not None:
         logger.info("*******新网审核中,企业用户手机号：" + str(tel_num) + " 新网用户编号：" + str(

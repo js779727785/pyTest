@@ -133,4 +133,7 @@ def regular(tel_num,password):
             logger.error("----新网开通投资人角色失败----")
             logger.info("返回结果："+str(result_data['auditStatus']))
 
-regular(register.register(),"js123456")
+# regular(register.register(),"js123456")
+# regular('16803588328','js123456')
+
+regular('16803588836','js123456')

@@ -34,4 +34,4 @@ def register():
             return tel_num
 
 
-# register()
+register()

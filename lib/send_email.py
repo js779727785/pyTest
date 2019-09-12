@@ -118,3 +118,31 @@ def send_mail(title, msg):
     # 发送邮件
     s.sendmail(sender, receiver.split(","), msg.as_string())
     s.quit()
+
+def send_mail2(title, msg):
+    # 发件人
+    sender = demoConfig.sender
+    # 收件人
+    receiver = demoConfig.receiver2
+    # smtp服务器
+    server = demoConfig.server
+    # 标题
+    title = title
+    # 内容
+    message = msg
+    # 账户
+    username = demoConfig.emailusername
+    # 密码
+    password = demoConfig.emailpassword
+
+    msg = MIMEText(message)
+    msg["Subject"] = title
+    msg["From"] = "GO Eating Now!!!"
+    msg["To"] = receiver
+    # 建立连接
+    s = smtplib.SMTP_SSL(server)
+    # 认证
+    s.login(username, password)
+    # 发送邮件
+    s.sendmail(sender, receiver.split(","), msg.as_string())
+    s.quit()
