@@ -18,12 +18,10 @@ from lib.log import logger
 
 
 def XwCheckUi(tel_num):
-    xw_id_sql = 'select xw_id from xw_user_role WHERE user_id=(SELECT id FROM user WHERE tel_num="' + str(
-        tel_num) + 'ORDER BY createtime desc");'
-    xw_id = MySQLHelper('qydproduction').selectsql(xw_id_sql)
+    xw_id_sql="select xw_id from xw_user_role WHERE user_id=(SELECT id FROM user WHERE tel_num=%s)ORDER BY create_time desc"
+    xw_id = MySQLHelper('qydproduction').get_many(xw_id_sql,tel_num)
     if xw_id is not None:
-        logger.info("*******新网审核中,企业用户手机号：" + str(tel_num) + " 新网用户编号：" + str(
-            xw_id[0]['xw_id']))
+        logger.info("*******新网审核中,企业用户手机号：" + str(tel_num) + " 新网用户编号：" + str(xw_id[0]['xw_id']))
         xw_url = "http://47.94.123.201:9000/lanmao-boss-app-pt/login"
         driver.get(xw_url)
         username = 'lmservice'
@@ -40,4 +38,4 @@ def XwCheckUi(tel_num):
     else:
         logger.error("———xw_id is None!!!!")
 
-# XwCheckUi('16803589912')
+# XwCheckUi('16803584422')

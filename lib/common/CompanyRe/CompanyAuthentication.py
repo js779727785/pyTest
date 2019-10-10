@@ -60,4 +60,4 @@ def companyauthentication(tel_num):
 
 
 # companyauthentication(register.register())
-
+# companyauthentication('16803584422')

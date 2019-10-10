@@ -1,7 +1,10 @@
-import random
+import random,uuid
 import datetime,requests
 from lib.mysql.userQuery import queryOldPossessionInfo
 from lib.mysql.divestmentAndBuy import queryAssign,queryTranaction
+from lib.log import logger
+import requests,random
+from config.url import qydregisterPhotoUrl,qydregisterSendMsgUrl,qydregisterUrl
 def testgo():
     """二者之间的随机数"""
     # str(random.randrange(10000000, 99999999))
@@ -46,3 +49,16 @@ def gogo():
         if str.count(i) == 1:
             list.append(i)
     print(list)
+def howtoUuid():
+    orderNo = uuid.uuid4()
+    """生成的uuid必须转化为字符串才能打印"""
+    print("orderNo:" + str(orderNo))
+def imgCheck():
+    a = random.randint(0, 100)
+    url_info = qydregisterPhotoUrl + str(a)[:2]
+    print(url_info)
+    imgParm={"validateKey":"01","originType":"PC","platform":"qyd","purpose":"register"}
+    imgre=requests.post(url=url_info,json=imgParm)
+    print(imgre)
+    logger.info("图形验证码返回结果:"+str(imgre))
+imgCheck()

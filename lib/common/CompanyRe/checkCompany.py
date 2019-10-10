@@ -76,5 +76,5 @@ def checkCompany(tel_num):
             logger.info("-----确认打款失败-----"+str(response_json['resultCode']['code'])+" , error_message: "+str(response_json['resultCode']['message']))
     else:logger.error("-----确认打款接口异常-----")
 
-# checkCompany('16803582520')
+checkCompany('16803584422')
 

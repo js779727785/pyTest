@@ -42,7 +42,7 @@ def bankedVerity(tel_num):
     else:logger.error("--------认领任务失败--------")
 
 
-# bankedVerity(16803581600)
+# bankedVerity(16803584422)
 
 
 

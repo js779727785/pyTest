@@ -21,11 +21,15 @@ class checkUserRole(unittest.TestCase):
         infoUrl = "/entrance/qyduser/checkUserRole"
         caseNum = tx['test_name']
         caseName = tx['test_description']
-        userRole = tx['userRole']
+        someParms = tx['someParms']
         status = tx['status']
         successful = tx['successful']
+        data={"someParms":someParms}
         logger.info("*******测试案例名称： TestCase" + caseNum + "_" + caseName + " 执行开始********")
-        """代码逻辑"""
+        reponse=requests.post(url=infoUrl,json=data,headers=headers)
+        reponse_json=reponse.json()
+        logger.info("请求接口返回结果:"+str(reponse_json))
+        self.assertEqual(reponse_json['entities'][0]['status'],status)
         logger.info("*******测试案例名称： TestCase" + caseNum + "_" + caseName + " 执行完毕********")
         logger.info("****************接口结束****************")
 

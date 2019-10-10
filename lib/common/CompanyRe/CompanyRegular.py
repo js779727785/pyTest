@@ -5,7 +5,7 @@ from lib.common import register
 """开通企业投资人存管账号"""
 def companyRegular():
     tel_num=register.register()
-    # tel_num = '16852311130'
+    # tel_num = '16803584422'
     CompanyAuthentication.companyauthentication(tel_num)
     BackendVerity.bankedVerity(tel_num)
     dakuan.dakuan(tel_num, '3')
