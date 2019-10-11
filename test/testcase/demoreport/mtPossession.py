@@ -4,6 +4,9 @@ from lib.mysql.possession import queryMtPossession
 from lib.mysql.userQuery import queryuser
 
 headers = {"Content-type": "application/json"}
+"""
+本地数据提取并完成单测
+"""
 class mtPossession(unittest.TestCase):
     def setUp(self) -> None:
         logger.info("*"*20+"start")
