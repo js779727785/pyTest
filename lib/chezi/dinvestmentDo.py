@@ -4,7 +4,7 @@ from lib.common.subminToken import subminToken
 from config.demoUrl import qyd_url
 from lib.log import logger
 
-"""新月/众盈撤资"""
+"""新月/众盈手动撤资"""
 def dinvestmentDo(phone,pwd,Stramount,productType):
     urlInfo="/entrance/newmt/dinvestmentDo/json"
     token = qydFrontLogin(phone, pwd)

@@ -55,6 +55,19 @@ def DaoqiQY(loanId):
     reponse2= MySQLHelper('qydproduction').get_many(reponseSql2, loanId)
     logger.info(loanId+"mt_loan修改后的repay_date为："+str(reponse1[0]['repay_date']))
     logger.info(loanId+"mt_possession修改后的day为：" + str(reponse2[0]['day']))
+def WeiYueQY(loanId):
+    sql1="update mt_loan set open_time=date_add(NOW(), interval -280 day),close_time=date_add(NOW(), interval -280 day),repay_date=date_add(NOW(), interval -100 day) where id='"+loanId+"';";
+    sql2="update mt_possession set loan_close_time=date_add(NOW(), interval -280 day),day=date_add(NOW(), interval -280 day),create_time=date_add(NOW(), interval -280 day) where loan_id='"+loanId+"';";
+    sql3 = "UPDATE mt_possession_order set create_time= date_add(create_time,INTERVAL -180 day) where loan_id='" + loanId + "';";
+    MySQLHelper('qydproduction').updatesql(sql1)
+    MySQLHelper('qydproduction').updatesql(sql2)
+    MySQLHelper('qydproduction').updatesql(sql3)
+    reponseSql1="select * from mt_loan where id=%s"
+    reponseSql2 = "select * from mt_possession where loan_id =%s"
+    reponse1=MySQLHelper('qydproduction').get_many(reponseSql1,loanId)
+    reponse2= MySQLHelper('qydproduction').get_many(reponseSql2, loanId)
+    logger.info(loanId+"mt_loan修改后的repay_date为："+str(reponse1[0]['repay_date']))
+    logger.info(loanId+"mt_possession修改后的day为：" + str(reponse2[0]['day']))
 
 """
 修改月盈精选QYB到期时间
@@ -82,7 +95,7 @@ def queryMtStatus(loanId):
 """轻盈还款"""
 def MakeOverdue(nowday):
     headers={"Content-Type":"application/json"}
-    #到期还款："type": 7,违约还款："type": 6,
+    #到期还款："type": 5,违约还款："type": 6,撤资还款：type：”7“
     param={
         "type": 6,
         "day": nowday,
@@ -94,6 +107,7 @@ def MakeOverdue(nowday):
 
 '''违约不想还款的话，先确保账户没钱；参数传标的id和当前日期的前一天'''
 
-# DaoqiQY('be7d689c-af34-484e-a42e-686e26e994ee')
-# MakeOverdue("2019-10-09")
-DaoqiQYB('55140af3-4f63-4c66-93f2-441c169a06d2')
+DaoqiQY('982039be-0efb-4cf9-a669-4802a657005e')
+# WeiYueQY('982039be-0efb-4cf9-a669-4802a657005e')
+# MakeOverdue("2019-10-24")
+# DaoqiXX('4206fbc0-1623-4943-a309-6f5db42df686')

@@ -47,7 +47,6 @@ def getDetailByTransactionId(transactionId):
     re_json=reponse.json()
     logger.info("查询QY交易明细结果："+str(re_json))
 
-unpledgelock('10',0,'46ec6a17-e920-4afe-85dd-da2a2080ee82')
-
-# unpledgelock('50',0,'da69bb83-5f06-4d54-98cf-5c7f398accf5')
+# unpledgelock('100',0,'46ec6a17-e920-4afe-85dd-da2a2080ee82')
+unpledgelock('20',0,'46ec6a17-e920-4afe-85dd-da2a2080ee82')
 # getDetailByTransactionId("094b5b58-554a-4d71-93f3-eaa399fb0db3")

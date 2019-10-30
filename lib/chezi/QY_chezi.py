@@ -4,7 +4,7 @@ from lib.common.subminToken import subminToken
 from config.demoUrl import qyd_url
 from lib.log import logger
 
-"""轻盈撤资"""
+"""轻盈手动撤资"""
 def QY_chezi(phone,pwd,Stramount,productType):
     urlInfo="/entrance/mt/withdrawInvestment/json"
     token = qydFrontLogin(phone, pwd)
