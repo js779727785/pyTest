@@ -2,17 +2,16 @@
 __author__ = "Jmelody"
 from lib.MySQLHelper import MySQLHelper
 from airtest.core.api import *
-auto_setup(__file__)
-from selenium.webdriver.common.keys import Keys
-
-"""注意以下airtest转来的脚本由于无法直接找到chrome_driver，按照chrome版本安装chrome_driver后，按以下方式配置后生效
-    保证chrome_driver支持版本和chrome一致，参考：
-    https://blog.csdn.net/qq_26200629/article/details/86141131
+"""注意以下airtest转来的脚本由于无法直接找到chrome_driver，按照chrome版本安装chrome_driver后，重写executable_path，chrome_driver下载地址：
+    http://npm.taobao.org/mirrors/chromedriver/
 """
-from selenium import webdriver
-chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver_76.exe'
-driver=webdriver.Chrome(executable_path=chrome_driver)
-# driver = WebChrome()
+# 没有用selenium的webdriver而是用的airtest_selenium
+from selenium.webdriver.common.keys import Keys
+# from selenium import webdriver
+# driver=webdriver.Chrome(executable_path=chrome_driver)
+from airtest_selenium import WebChrome
+chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe'
+driver = WebChrome(executable_path=chrome_driver)
 driver.implicitly_wait(20)
 from lib.log import logger
 
@@ -38,4 +37,4 @@ def XwCheckUi(tel_num):
     else:
         logger.error("———xw_id is None!!!!")
 
-# XwCheckUi('16803584422')
+XwCheckUi('16803584422')
