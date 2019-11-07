@@ -44,11 +44,9 @@ class InstanseName(unittest.TestCase):
     def getTestFunc(arg1):
         def func(self):
             self.getTest(arg1)
-
         return func
 
     def tearDown(self):
         logger.info("*" * 80)
-
 
 __generateTestCases(InstanseName, "instanseName", "api_qyd.xlsx", "sheetName")

@@ -58,7 +58,6 @@ def checkGetMany2(self):
     if resultInfo is not None or resultInfo.__len__()>0:
         for i in range(resultInfo.__len__()):
             self.assertEquals(resultInfo[i]["sqlStatus"], testdata[0]['exceptStatus'])
-
 def gogo():
     """用python编程，从屏幕上输入一个字符串，将这个字符串里面所有不同的字符提取出来，放在一个字符数组里面"""
     str = 'today I will go home'
@@ -102,9 +101,8 @@ def quick_sort(arr):
     less = [i for i in arr[1:] if i < pivot]
     greater = [i for i in arr[1:] if i > pivot]
     return quick_sort(less) + [pivot] +  quick_sort(greater)
-
-a = [23,33,44,12,55,12,8]
-print(quick_sort(a))
+# a = [23,33,44,12,55,12,8]
+# print(quick_sort(a))
 
 #老式快速排序
 # def partition(arr, low, high):
@@ -147,4 +145,25 @@ def jiujiu():
         for j in range(1,i+1):
             print("{}*{}={}\t".format(j,i,i*j),end="")
         print()
-jiujiu()
+def listDemo(lis):
+    """list[start:end:step]
+    """
+    lis = [1, 2, 3, 4, 5, 6, 7, 8]
+    "步长为2,跳跃式取值"
+    print(lis[::2])
+    print(lis[:2])
+    "取值为字符"
+    print(lis[0])
+    "取值为list"
+    print(lis[:1])
+    "去除最后一个元素"
+    print(lis[:-1])
+    print(lis[3:-1])
+    "翻转list"
+    print(lis[::-1])
+    "取从下标为3的元素翻转读取"
+    print(lis[3::-1])
+    print(lis[2::-2])
+    print(lis[6::-2])
+listDemo(a)
+
