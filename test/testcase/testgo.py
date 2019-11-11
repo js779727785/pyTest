@@ -81,18 +81,13 @@ def imgCheck():
     logger.info("图形验证码返回结果:"+str(imgre))
 
 
-def queryConfireLoan(self):
-    sql_info = "select id from qydproduction.mt_loan where STATUS=%s order by create_time desc limit 2;"
-    response = MySQLHelper('qydproduction').get_many(sql_info,"CONFIRM")
-    loanId=response[0]['id']
-    print(loanId)
-
 def checkType(self,tel_num,product_type):
-     sql_info="SELECT * FROM qydnewproduction.mt_reinvestment WHERE user_id=(SELECT id from qydproduction.user where tel_num={}) and product_type='{}';".format(tel_num,product_type)
-     response=MySQLHelper("qydnewproduction").selectsql(sql_info)
-     rep=response[0]['product_type']
-     res=response[0]['status']
-     logger.info("a:{},B:{}".format(rep,res))
+     sql_info="SELECT * FROM qydnewproduction.mt_reinvestment WHERE user_id=(SELECT id from qydproduction.user where tel_num='%s') and product_type='%s';"%(tel_num,product_type)
+     print(sql_info)
+     print("我叫%s，今年%d岁" % ('James', 12))
+     print("我叫{}，今年{}岁".format('James', '12'))
+# checkType('1',16803581611,'QYD')
+
 """快速排序"""
 def quick_sort(arr):
     if len(arr) < 2:
@@ -163,7 +158,79 @@ def listDemo(lis):
     print(lis[::-1])
     "取从下标为3的元素翻转读取"
     print(lis[3::-1])
-    print(lis[2::-2])
+    print(lis[3::-2])
     print(lis[6::-2])
-listDemo(a)
+# listDemo(a)
 
+"""abs绝对值函数"""
+def absdemo(n):
+    print(abs(-1))
+    print(abs(0))
+    print(abs(n))
+    return abs(n)
+# absdemo(1)
+
+"""map练习
+https://blog.csdn.net/qq_29666899/article/details/88623026
+map函数的原型是map(function, iterable, …)
+"""
+def mul(x):
+    return x*x
+def mul2(x,y):
+    return x*y
+n=[1,2,3,4,5]
+c=[2,3,4,5,6]
+re=map(mul,n)
+res=map(mul2,n,c)
+"""<map object at 0x000001F78B92A6D8>报错，原因：python3中map()返回iterators类型，不再是list类型。进行list转换即可"""
+# print(list(re))
+# print(list(res))
+"""用lambd表达式简化"""
+# print(list(map(lambda x:x**2,n)))
+# print(list(map(lambda x,y:x*y,n,c)))
+
+"""set函数
+是一个无序不重复元素集
+基本功能包括关系测试和消除重复元素.
+"""
+#1.消除重复
+a=[2,3,5,1,2,3,2,3,4,5,3]
+# print(set(a))
+# print(list(set(a)))
+#2.关系测试：
+x=set('spam')
+y=set(['h','a','m'])
+z=set(['a','m'])
+#交集。（&  或者 intersection）
+# print(list(x&y))
+#并集。（| 或者 union）
+# print(list(x|y))
+#差集。（- 或者 difference）
+# print(list(x-y))
+#反交集。 （^ 或者 symmetric_difference）即去重后再取交集
+# print(list(x^y))
+#子集与超集,issubset
+# print(z<x)
+#set中的增，删，查
+#https://www.cnblogs.com/crazylover/p/9672833.html
+set1=set({'jim','Jordan','Spider Man'})
+set1.add('James')
+set1.remove('jim')#如果元素不存在，移除时会报错
+set1.discard('cc')#如果元素不存在，移除时不不不会报错
+#随机删除集合的某一个元素
+set1.pop()
+#清空集合
+set1.clear()
+
+# print(set1)
+# for i in set1:
+    # print(i)
+
+"""两个list去重之后取交集，返回list"""
+def setDemo(lis1,list2):
+    lis= list(set(lis1)^set(list2))
+    print(lis)
+    return lis
+a=[1,2,3,4,5]
+b=[6,5,4,2]
+# setDemo(a,b)
