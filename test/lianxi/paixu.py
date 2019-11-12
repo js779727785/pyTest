@@ -1,7 +1,6 @@
-import random,uuid
-from lib.log import logger
-import operator
-""""计数，排序
+
+"""计数，排序
+https://www.cnblogs.com/dyl01/p/8563550.html
 sorted(dic.items(),key,reverse),
 Counter,
 list.count('value')
@@ -10,7 +9,8 @@ a=[1,2,3,44,55,22,3,4,22]
 """排序，默认升序
 a.sort()
 #若要降序，可取反
-a.reverse()"""
+a.sort(reverse=True)
+"""
 # print(a)
 """冒泡排序并统计次数"""
 def func(a):
@@ -32,3 +32,10 @@ def quick_sort(arr):
     return quick_sort(less) + [pivot] +  quick_sort(greater)
 # a = [23,33,44,12,55,12,8]
 # print(quick_sort(a))
+
+dic = {'a':2,'b':1}
+d = sorted(dic,key = lambda k:k[0])
+# print(d)
+#字典的key-values互换
+z={value:key for key,value in dic.items()}
+# print(z)

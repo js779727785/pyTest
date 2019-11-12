@@ -83,10 +83,12 @@ def jiujiu():
         for j in range(1,i+1):
             print("{}*{}={}\t".format(j,i,i*j),end="")
         print()
-def listDemo(lis):
+def listDemo():
     """list[start:end:step]
     """
     lis = [1, 2, 3, 4, 5, 6, 7, 8]
+    print(lis[:])
+    print(lis[1:7])
     "步长为2,跳跃式取值"
     print(lis[::2])
     print(lis[:2])
@@ -103,7 +105,7 @@ def listDemo(lis):
     print(lis[3::-1])
     print(lis[3::-2])
     print(lis[6::-2])
-# listDemo(a)
+# listDemo()
 
 """abs绝对值函数"""
 def absdemo(n):
