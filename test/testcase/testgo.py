@@ -12,18 +12,6 @@ def func(n):
         return 1
     else:
         return func(n-1)+func(n-2)
-
-a={1,2,3,44,55,22,3,4,22}
-"""冒泡排序并统计次数"""
-def func(a):
-    count=0
-    for i in range(len(a)-1):
-        for j in range(len(a)-i-j):
-            if a[j]>a[j+1]:
-                a[j],a[j+1]=a[j+1],a[j]
-                count+=1
-    return a,count
-
 def testgo():
     """二者之间的随机数"""
     # str(random.randrange(10000000, 99999999))
@@ -89,52 +77,6 @@ def checkType(self,tel_num,product_type):
      print("我叫{}，今年{}岁".format('James', '12'))
 # checkType('1',16803581611,'QYD')
 
-"""快速排序"""
-def quick_sort(arr):
-    if len(arr) < 2:
-        return arr
-    pivot = arr[0]
-    less = [i for i in arr[1:] if i < pivot]
-    greater = [i for i in arr[1:] if i > pivot]
-    return quick_sort(less) + [pivot] +  quick_sort(greater)
-# a = [23,33,44,12,55,12,8]
-# print(quick_sort(a))
-
-#老式快速排序
-# def partition(arr, low, high):
-#     i = (low - 1)  # 最小元素索引
-#     pivot = arr[high]
-#     for j in range(low, high):
-#         # 当前元素小于或等于 pivot
-#         if arr[j] <= pivot:
-#             i = i + 1
-#             arr[i], arr[j] = arr[j], arr[i]
-#     arr[i + 1], arr[high] = arr[high], arr[i + 1]
-#     return (i + 1)
-# # arr[] --> 排序数组
-# # low  --> 起始索引
-# # high  --> 结束索引
-# # 快速排序函数
-# def quickSort(arr, low, high):
-#     if low < high:
-#         pi = partition(arr, low, high)
-#         quickSort(arr, low, pi - 1)
-#         quickSort(arr, pi + 1, high)
-# arr = [10, 7, 8, 9, 1, 5]
-# n = len(arr)
-# quickSort(arr, 0, n - 1)
-# print("排序后的数组:")
-# for i in range(n):
-#     print("%d" % arr[i])
-#
-# def quick_sort(lis):
-#     if len(lis)<2:
-#         return lis
-#     else:
-#         tem=lis[0]
-#         max= [i for i in range(lis[1:]) if i>tem]
-#         less=[i for i in range(lis[1:]) if i<tem ]
-#     return quick_sort(less)+[tem]+quick_sort(max)
 """九九乘法表"""
 def jiujiu():
     for i in range(1,10):
@@ -243,33 +185,15 @@ def setDemo2(lis1,lis2):
 # setDemo2(a,b)
 """对数组元素出现个数计数"""
 def countNum(lis,strValue):
+    # a = [222, 222, 111, 333, 'a', b, 222, b, c, 'a', b, 333, 11, 111]
+    #参数必须为string
     num=str(lis).count(strValue)
     print(num)
     return num
+def countNum2(lis,strV):
+    res=lis.count(strV)
+    print(res)
+    return res
 """todo{}集合如何计数？？？？"""
-# num=str(b).count('2')
-# num=b.count(2)
-# print(num)
-# countNum(b,'2')
-
-
-"""python将一个list去重并按出现次数从大到小排序"""
-list_a = [1,2,3,4,5,6,1,1,1,2,2,3,4,4,5,5,5,5,6,6,6,6,6,6]
-print("list_a: " + str(list_a) + '\n')
-
-set_a = list(set(list_a))  # 去重得到一个集合
-print("set_a: " + str(set_a) + '\n')
-
-count_set_a = {}  # 存放元素和出现次数的字典，key为元素,value为出现次数
-for item in set_a:
-    count_set_a[item] = list_a.count(item)
-print("count_set_a: " + str(count_set_a) + '\n')
-
-# 将cou_set_a按value值排序，返回一个list，list中元素是形式为(1,4)的tuple，tuple[0]为键值，tuple[1]为出现次数
-sorted_list_a = sorted(count_set_a.items(), key=operator.itemgetter(1))
-print("sorted_list_a: " + str(sorted_list_a) + '\n')
-
-result_a = []  # 存放最后的结果
-for item in sorted_list_a[::-1]: # 按value值从大到小排序
-    result_a.append(item[0])
-print("result_a: " + str(result_a) + '\n')
+a = (222, 222, 111, 333, 'a', b, 222, b, c, 'a', b, 333, 11, 111)
+print(a.count(222))
