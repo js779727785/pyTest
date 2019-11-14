@@ -33,9 +33,22 @@ def quick_sort(arr):
 # a = [23,33,44,12,55,12,8]
 # print(quick_sort(a))
 
-dic = {'a':2,'b':1}
-d = sorted(dic,key = lambda k:k[0])
-# print(d)
+
+"""
+dict字典
+dic.items()为('a', 2)
+dic含义与dic.key()一样
+dic含义与dic.key()一样
+"""
+dic = {'a':2,'b':1,'c':3}
+#循环输出key,value
+# for key,value in dic.items():
+#     print("key：{},value：{}".format(key,value))
 #字典的key-values互换
 z={value:key for key,value in dic.items()}
 # print(z)
+d = sorted(dic,key = lambda k:k[0])
+import operator
+x = sorted(dic.items(),key =operator.itemgetter(0))
+print(d)
+
