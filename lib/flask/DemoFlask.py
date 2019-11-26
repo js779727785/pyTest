@@ -1,5 +1,6 @@
 from flask import *
-from test.testcase import testgo
+from test.lianxi import testgo
+
 """"
 学习Flask
 https://www.jianshu.com/p/0f528c47c5bf

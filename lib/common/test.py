@@ -16,4 +16,4 @@ def test():
     tel_num=register.register()
     print(tel_num)
 
-test()
+# test()

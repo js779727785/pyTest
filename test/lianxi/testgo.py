@@ -199,3 +199,9 @@ def countNum2(lis,strV):
 """集合如何计数"""
 a = (222, 222, 111, 333, 'a', b, 222, b, c, 'a', b, 333, 11, 111)
 # print(a.count(222))
+import datetime
+def getTime():
+    today=datetime.datetime.today().strftime('%Y-%m-%d')
+    nowTime=datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    print("today:{}  , nowTime:{}".format(today,nowTime))
+getTime()

@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 from matplotlib.font_manager import FontProperties
 
-from lib.tools import send_email_mixed
+from lib import send_email
 
 font_set = FontProperties(fname=r"../lib/fonts/simsun.ttc", size=12)
 
@@ -100,4 +100,5 @@ if __name__ == "__main__":
     content = "Hi All:<br><br> <h2>以下为测试组Bug和用例统计情况:</h2><h3 style=\"color:red \">Bug总数: " + str(
         total_bugs) + "</h3><h3 style=\"color:green \">用例总数: " + str(total_cases) + "</h3><br><hr>"
     title = "测试组工作产出日报 " + yestday.strftime("%Y-%m-%d")
-    send_email_mixed(content, title, os.path.abspath(daily_report_path))
+    # send_email_mixed(content, title, os.path.abspath(daily_report_path))
+
