@@ -30,10 +30,8 @@ def quick_sort(arr):
     less = [i for i in arr[1:] if i < pivot]
     greater = [i for i in arr[1:] if i > pivot]
     return quick_sort(less) + [pivot] +  quick_sort(greater)
-# a = [23,33,44,12,55,12,8]
+a = [23,33,44,12,55,12,8]
 # print(quick_sort(a))
-
-
 """
 dict字典
 dic.items()为('a', 2)

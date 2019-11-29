@@ -23,16 +23,17 @@ def randomInt():
     print(a)
     return a
 def nowtime():
-    # 获取当前时间 格式为 20170101000000
-    currentTime = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    print(currentTime)
+    # 获取当前时间 格式为 20170101000000,datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    currentTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    logger.info('today:{},currentTime:{}'.format(today,currentTime))
     return  currentTime
+
 def demomanysql(param):
     possessionInfo=queryOldPossessionInfo(param)
     print(possessionInfo)
     possLen = possessionInfo.__len__()
     print(possLen)
-
 def checkGetMany1(self):
     """第一种get_many结果的断言语句可以直接拿返回结果，用checkPossessionData判断"""
     items=requests(url="",json="",header="")
@@ -56,10 +57,12 @@ def gogo():
         if str.count(i) == 1:
             list.append(i)
     print(list)
+
 def howtoUuid():
     orderNo = uuid.uuid4()
     """生成的uuid必须转化为字符串才能打印"""
     print("orderNo:" + str(orderNo))
+
 def imgCheck():
     a = random.randint(0, 100)
     url_info = qydregisterPhotoUrl + str(a)[:2]
@@ -83,8 +86,10 @@ def jiujiu():
         for j in range(1,i+1):
             print("{}*{}={}\t".format(j,i,i*j),end="")
         print()
+# jiujiu()
 def listDemo():
     """list[start:end:step]
+    包含start，不包含end指向的元素
     """
     lis = [1, 2, 3, 4, 5, 6, 7, 8]
     print(lis[:])
@@ -106,7 +111,6 @@ def listDemo():
     print(lis[3::-2])
     print(lis[6::-2])
 # listDemo()
-
 """abs绝对值函数"""
 def absdemo(n):
     print(abs(-1))
@@ -139,7 +143,7 @@ res=map(mul2,n,c)
 基本功能包括关系测试和消除重复元素.
 """
 #1.消除重复
-a=[2,3,5,1,2,3,2,3,4,5,3]
+a=[22,2,3,5,1,2,3,22,2,3,4,5,3]
 # print(set(a))
 # print(list(set(a)))
 #2.关系测试：
@@ -171,7 +175,7 @@ set1.clear()
 # for i in set1:
     # print(i)
 
-"""两个list去重之后取交集，返回list,注意返回是无序的，用sorted(list)进行排序或list.sort()"""
+"""两个list去重之后取交集（即取反交集），返回list,注意返回是无序的，用sorted(list)进行排序或list.sort()"""
 def setDemo(lis1,list2):
     lis= list(set(lis1)^set(list2))
     print(lis)
@@ -204,4 +208,14 @@ def getTime():
     today=datetime.datetime.today().strftime('%Y-%m-%d')
     nowTime=datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     print("today:{}  , nowTime:{}".format(today,nowTime))
-getTime()
+# getTime()
+
+"""6.1写一个冒泡排序和快速排序"""
+"""6.2一个list,一个集合，取出在A内不在B内的，输出新的list"""
+"""6.3一个list,一个集合,相互乘积，得到一个新的list并去重排序"""
+# c=[2,3,4,5,6.222,111,444]
+# n={333,222,111,1,2,3,4,5}
+c=[2,3,4,5,6,3,2]
+n=[3,4,5,2,3,1,3]
+
+
