@@ -1,15 +1,12 @@
-## -*- encoding=utf8 -*-
+# -*- encoding=utf8 -*-
 __author__ = "Jmelody"
-from selenium.webdriver.common.keys import Keys
 from airtest.core.api import *
-auto_setup(__file__)
-from selenium import webdriver
-chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver_76.exe'
-driver=webdriver.Chrome(executable_path=chrome_driver)
-# driver = WebChrome()
+from airtest_selenium.proxy import WebChrome
+chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver_78.exe'
+driver = WebChrome(executable_path=chrome_driver)
+from selenium.webdriver.common.keys import Keys
 driver.implicitly_wait(20)
 from lib.log import logger
-# from lib.common.WebUi import Ui_WebLogin
 
 def UiBorrowRe(tel_num,password):
     driver.get("https://azure-www.qingyidai.com/member/login.shtml")

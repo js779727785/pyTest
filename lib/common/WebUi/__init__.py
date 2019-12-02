@@ -9,12 +9,15 @@
 #     保证chrome_driver支持版本和chrome一致，参考：
 #     https://blog.csdn.net/qq_26200629/article/details/86141131
 # """
-# from selenium import webdriver
-# chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver_76.exe'
-# driver=webdriver.Chrome(executable_path=chrome_driver)
-# # driver = WebChrome()
+# -*- encoding=utf8 -*-
+# __author__ = "Jmelody"
+# from airtest.core.api import *
+# from airtest_selenium.proxy import WebChrome
+# chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver_78.exe'
+# driver = WebChrome(executable_path=chrome_driver)
+# from selenium.webdriver.common.keys import Keys
 # driver.implicitly_wait(20)
-# from lib.log import logger
+from lib.log import logger
 #
 #
 # def DemoWebUi(tel_num):
