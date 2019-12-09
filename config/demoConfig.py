@@ -11,3 +11,4 @@ receiver = 'jingshuai@kaiyuan.net'
 emailusername = 'jingshuai@kaiyuan.net'  # 登陆邮箱的用户名
 emailpassword = 'Js1234...'  # 登陆邮箱的授权码
 server = 'mail.kaiyuan.net'  # smtp服务器2017/6/22
+# receiver2='wangle@kaiyuan.net,jingshuai@kaiyuan.net,zhanghao@kaiyuan.net,liucaiyu@kaiyuan.net'

@@ -40,3 +40,4 @@ def sortFunc(lis):
     print(res)
     return res
 # sortFunc(a)
+# coding:utf-8

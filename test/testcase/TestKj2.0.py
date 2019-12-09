@@ -1,6 +1,8 @@
 #coding=utf-8
 import unittest
 import requests
+import temple
+from unittest import mock
 from lib.generateTestCases import __generateTestCases
 from lib.log import logger
 headers = {"Content-Type": "application/json"}

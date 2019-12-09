@@ -21,7 +21,7 @@ def func(a):
                 a[j],a[j+1]=a[j+1],a[j]
                 count+=1
     return a,count
-# func(a)
+print(func(a))
 """快速排序"""
 def quick_sort(arr):
     if len(arr) < 2:

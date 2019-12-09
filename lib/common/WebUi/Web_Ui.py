@@ -66,5 +66,5 @@ def Web_WithDraw(userName,password,transPassword,amount=0,isMaxAmount=1):
     driver.find_element_by_id("//*[@id='smsCode']").send_keys(password)
     driver.find_element_by_id("//*[@id='password']").send_keys(transPassword)
     driver.find_element_by_xpath("//*[@id='nextButton']").click()
-
-Web_WithDraw('16803586328','js123456','js12345678')
+Web_Recharge('16803586328','js123456','5000')
+# Web_WithDraw('16803586328','js123456','js12345678')
