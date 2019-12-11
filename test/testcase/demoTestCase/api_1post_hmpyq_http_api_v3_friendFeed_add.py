@@ -8,7 +8,7 @@ from config import hm_pyq_url
 
 ##发布朋友圈
 class ApiV3FriendFeedAdd(unittest.TestCase):
-    """发布朋友圈-刘才宇"""
+    """发布朋友圈-Jmelody"""
     def setUp(self):
         logger.info("*" * 80)
     def getTest(self,data):

@@ -15,7 +15,7 @@ headers = {"Content-type": "application/json"}
 
 
 class CheckOpenFQD(unittest.TestCase):
-    """分期贷开标应急中心数据检查---李竹梅"""
+    """分期贷开标应急中心数据检查---Jmelody"""
     def setUp(self):
         logger.info("*" * 80)
 

@@ -1,15 +1,15 @@
 #coding=utf-8
 import unittest
 import requests
-import temple
-from unittest import mock
 from lib.generateTestCases import __generateTestCases
 from lib.log import logger
+from config.urls import  qyd_base_url
+from  lib.qyd_common import qydFrontLogin
 headers = {"Content-Type": "application/json"}
 
 """
 统一风格的模板，author：Jmelody
-文件命名：api_post_qyd_http_nbigfront_entrance_newmt_XX_json.py
+文件命名：api_post_qyd_http_nbigfront_web_myBorrowInfo_json.py
 接口文档：
 getZyBackMoneyPlan
 api_post_qyd_http_nbigfront_web_accessionlist_json.py
@@ -35,9 +35,11 @@ class InstanseName(unittest.TestCase):
         logger.info("*******测试案例名称： TestCase" + caseNum + "_" + caseName + " 执行开始********")
         logger.info("请求参数：" + str(data) + "headers:" + str(headers))
         reponse = requests.post(url=infoUrl, json=data, headers=headers)
+        reponse_time=reponse.elapsed.total_seconds()
         reponse_json = reponse.json()
         # print(reponse_json)
         logger.info("请求接口返回结果:" + str(reponse_json))
+        logger.info("请求接口响应时间为:" + str(reponse_time))
         self.assertEqual(reponse_json['code'], code)
         logger.info("*******测试案例名称： TestCase" + caseNum + "_" + caseName + " 执行完毕********")
         logger.info("****************demo接口结束****************")
@@ -46,9 +48,11 @@ class InstanseName(unittest.TestCase):
     def getTestFunc(arg1):
         def func(self):
             self.getTest(arg1)
+
         return func
 
     def tearDown(self):
         logger.info("*" * 80)
+
 
 __generateTestCases(InstanseName, "instanseName", "api_qyd.xlsx", "sheetName")
