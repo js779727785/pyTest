@@ -11,16 +11,17 @@
 # """
 # -*- encoding=utf8 -*-
 # __author__ = "Jmelody"
-# from airtest.core.api import *
-# from airtest_selenium.proxy import WebChrome
-# chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver_78.exe'
-# driver = WebChrome(executable_path=chrome_driver)
-# from selenium.webdriver.common.keys import Keys
-# driver.implicitly_wait(20)
+from airtest.core.api import *
+from airtest_selenium.proxy import WebChrome
+chrome_driver='/Users/jingshuai/Downloads/chromedriver'
+driver = WebChrome(executable_path=chrome_driver)
+from selenium.webdriver.common.keys import Keys
+driver.implicitly_wait(20)
 from lib.log import logger
-#
-#
-# def DemoWebUi(tel_num):
-#     str=''
-#     driver.find_element_by_xpath("//input[@data-parsley-length='[0, 100]']").send_keys(str(str[0]['xw_id']), Keys.ENTER)
-#     logger.info(str(tel_num)+"——————someLog——————")
+def DemoWebUi(tel_num):
+    str=''
+    driver.find_element_by_xpath("//input[@data-parsley-length='[0, 100]']").send_keys(str(str[0]['xw_id']), Keys.ENTER)
+    logger.info(str(tel_num)+"——————someLog——————")
+def getUrl():
+    driver.get("https://news.baidu.com")
+getUrl()

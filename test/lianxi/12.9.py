@@ -6,7 +6,7 @@ dic={
 }
 """
 encode:
-json=json,dumps(dic)
+json=json.dumps(dic)
 decode:
 dic=response.json()
 """

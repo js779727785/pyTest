@@ -30,14 +30,22 @@ list_a = [1,2,3,4,5,6,1,1,1,2,2,3,4,4,5,5,5,5,6,6,6,6,6,6]
 a=[22,3333,3333,4444,4444,22,3333,222,22,333,333,22,22,3333,3333,4444,4444,11,22,22,11,22]
 from collections import Counter
 import operator
-def sortFunc(lis):
-    dic=Counter(lis)
-    print(dic)
-    sort_lis=sorted(dic.items(),key=operator.itemgetter(1))
-    res=[]
-    for i in sort_lis:
-        res.append(i[0])
-    print(res)
-    return res
+# def sortFunc(lis):
+#     dic=Counter(lis)
+#     print(dic)
+#     sort_lis=sorted(dic.items(),key=operator.itemgetter(1))
+#     res=[]
+#     for i in sort_lis:
+#         res.append(i[0])
+#     print(res)
+#     return res
 # sortFunc(a)
 # coding:utf-8
+from collections import Counter
+re=Counter(a)
+print(re)
+print(max(re.keys()))
+#学习max用法，前面的传参为后面key传入fun，输出为前面参数内最大值
+print(max(re.keys(),key=re.get))
+# #max中无key，则直接比较参数大小，输出参数内最大值
+# print(max(re.values()))

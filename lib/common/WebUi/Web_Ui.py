@@ -2,7 +2,7 @@
 __author__ = "Jmelody"
 from airtest.core.api import *
 from airtest_selenium.proxy import WebChrome
-chrome_driver='C:/Program Files (x86)/Google/Chrome/Application/chromedriver_78.exe'
+chrome_driver='/Users/jingshuai/Downloads/chromedriver'
 driver = WebChrome(executable_path=chrome_driver)
 driver.implicitly_wait(20)
 from lib.log import logger
@@ -66,5 +66,5 @@ def Web_WithDraw(userName,password,transPassword,amount=0,isMaxAmount=1):
     driver.find_element_by_id("//*[@id='smsCode']").send_keys(password)
     driver.find_element_by_id("//*[@id='password']").send_keys(transPassword)
     driver.find_element_by_xpath("//*[@id='nextButton']").click()
-Web_Recharge('16803586328','js123456','5000')
+# Web_Recharge('16803586328','js123456','5000')
 # Web_WithDraw('16803586328','js123456','js12345678')

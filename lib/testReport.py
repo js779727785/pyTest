@@ -66,5 +66,5 @@ if __name__ == "__main__":
     title = "测试组工作产出日报 " + yestday.strftime("%Y-%m-%d")
     # send_email_mixed(content, title, os.path.abspath(daily_report_path))
     print(content)
-    send_email.send_mail("titlename", msg=content)
-    send_email.send_mail("titlename", msg=os.path.abspath(daily_report_path))
+    # send_email.send_mail("titlename", msg=content)
+    # send_email.send_mail("titlename", msg=os.path.abspath(daily_report_path))

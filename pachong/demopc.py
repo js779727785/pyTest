@@ -57,7 +57,7 @@ def demoPP():
     url="http://www.biqukan.com/1_1094/5403177.html"
     page = requests.get(url=url)
     page_info=page.text
-    soup=BeautifulSoup(page_info)
+    soup=BeautifulSoup(page_info,'html.parser')
+    print(soup)
 
-
-demoPP()
+# demoPP()

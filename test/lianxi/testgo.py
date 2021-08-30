@@ -1,13 +1,12 @@
 import random,uuid
 import datetime,requests
-from lib.mysql.userQuery import queryOldPossessionInfo
-from lib.mysql.divestmentAndBuy import queryAssign,queryTranaction
 from lib.log import logger
 import requests,random
 import operator
-from lib.MySQLHelper import MySQLHelper
 """斐波那契数列"""
 def func(n):
+    if n==0:
+        return 0
     if n==1 or n==2:
         return 1
     else:
@@ -36,12 +35,12 @@ def demomanysql(param):
     print(possLen)
 def checkGetMany1(self):
     """第一种get_many结果的断言语句可以直接拿返回结果，用checkPossessionData判断"""
-    items=requests(url="",json="",header="")
+    items=requests.post(url="",json="",header="")
     resultInfo=queryAssign
     self.checkPossessionData(resultInfo, items)
 def checkGetMany2(self):
     """第二种get_many在返回结果前在sql中for循环取结果"""
-    items = requests(url="", json="", header="")
+    items = requests.post(url="", json="", header="")
     resultInfo = queryAssign
     """注意以下对List循环提取写法"""
     if resultInfo is not None or resultInfo.__len__()>0:
@@ -87,6 +86,7 @@ def jiujiu():
             print("{}*{}={}\t".format(j,i,i*j),end="")
         print()
 # jiujiu()
+#Python切片
 def listDemo():
     """list[start:end:step]
     包含start，不包含end指向的元素
@@ -106,7 +106,7 @@ def listDemo():
     print(lis[3:-1])
     "翻转list"
     print(lis[::-1])
-    "取从下标为3的元素翻转读取"
+    "先取从下标为3的元素翻转读取"
     print(lis[3::-1])
     print(lis[3::-2])
     print(lis[6::-2])
@@ -137,7 +137,14 @@ res=map(mul2,n,c)
 """用lambd表达式简化"""
 # print(list(map(lambda x:x**2,n)))
 # print(list(map(lambda x,y:x*y,n,c)))
+"""reduce,，传入（fun,*arg）,fun必须接受2个参数"""
+from functools import reduce
 
+#求数组内之和
+# print(reduce(lambda x,y:x+y,n))
+#求数组内之乘积
+re=reduce(lambda x,y:x*y,n)
+# print(re)
 """set函数
 是一个无序不重复元素集
 基本功能包括关系测试和消除重复元素.
@@ -210,4 +217,6 @@ def getTime():
     print("today:{}  , nowTime:{}".format(today,nowTime))
 # getTime()
 
-
+def xx():
+    logger.info('？？？？我是日志')
+# xx()

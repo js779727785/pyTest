@@ -44,5 +44,5 @@ def bankidCardNo():
     print(bankCard)
     return bankCard
 
-# getRandomIdNumber()
-# bankidCardNo()
+getRandomIdNumber()
+bankidCardNo()

@@ -1,6 +1,5 @@
 from lib.log import logger
 import requests,random
-from config.url import qydregisterPhotoUrl,qydregisterSendMsgUrl,qydregisterUrl
 
 
 headers = {"Content-type": "application/json"}
@@ -37,4 +36,8 @@ def register():
             return tel_num
 
 
-register()
+# register()
+def xx():
+    tel_num = "7210" + str(random.randrange(1000000, 9999999, 7))
+    print(tel_num)
+xx()
