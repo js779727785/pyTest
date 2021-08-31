@@ -1,0 +1,103 @@
+{
+  "uid" : "58a227c213f8c528",
+  "name" : "test1[test0-1]",
+  "fullName" : "allure_demo.Test_module1#test1",
+  "historyId" : "87ba44725fc9ddbb2f86409216d788a2",
+  "time" : {
+    "start" : 1585051803730,
+    "stop" : 1585051803731,
+    "duration" : 1
+  },
+  "description" : "\n            用例描述：期权强平市价委托\n        ",
+  "descriptionHtml" : "<pre><code>        用例描述：期权强平市价委托\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 1 == 2\n  +1\n  -2",
+  "statusTrace" : "self = <allure_demo.allure_demo.Test_module1 object at 0x1063ff1d0>, str1 = '1', str2 = 'test0'\n\n    @allure.feature('期权市价委托强平')\n    @pytest.mark.parametrize('str1',testlist)\n    @pytest.mark.parametrize('str2',testlist2)\n    def test1(self,str1,str2):\n        \"\"\"\n            用例描述：期权强平市价委托\n        \"\"\"\n        stradd = str1 + str2\n        print('这是test1')\n>       assert 1 == 2\nE       assert 1 == 2\nE         +1\nE         -2\n\nallure_demo.py:30: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "prepare",
+    "time" : {
+      "start" : 1585051803730,
+      "stop" : 1585051803730,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "prepare::0",
+    "time" : {
+      "start" : 1585051803815,
+      "stop" : 1585051803815,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "期权强平测试"
+  }, {
+    "name" : "feature",
+    "value" : "期权市价委托强平"
+  }, {
+    "name" : "suite",
+    "value" : "allure_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_module1"
+  }, {
+    "name" : "host",
+    "value" : "bogon"
+  }, {
+    "name" : "thread",
+    "value" : "95175-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "allure_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "str1",
+    "value" : "'1'"
+  }, {
+    "name" : "str2",
+    "value" : "'test0'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "58a227c213f8c528.json",
+  "parameterValues" : [ "'1'", "'test0'" ]
+}

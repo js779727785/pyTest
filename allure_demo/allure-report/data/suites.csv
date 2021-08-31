@@ -1,0 +1,30 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test1[test2-test1]","
+            用例描述：期权强平市价委托
+        "
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","1","","allure_demo","Test_module1","","","test1[test0-1]","
+            用例描述：期权强平市价委托
+        "
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test1[test3-1]","
+            用例描述：期权强平市价委托
+        "
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test1[test2-1]","
+            用例描述：期权强平市价委托
+        "
+"passed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test2",""
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test1[test3-test1]","
+            用例描述：期权强平市价委托
+        "
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test1[test0-test1]","
+            用例描述：期权强平市价委托
+        "
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test1[test2-test]","
+            用例描述：期权强平市价委托
+        "
+"passed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module2","","","test3",""
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","1","","allure_demo","Test_module1","","","test1[test3-test]","
+            用例描述：期权强平市价委托
+        "
+"failed","Tue Mar 24 20:10:03 CST 2020","Tue Mar 24 20:10:03 CST 2020","0","","allure_demo","Test_module1","","","test1[test0-test]","
+            用例描述：期权强平市价委托
+        "

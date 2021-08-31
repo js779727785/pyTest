@@ -1,0 +1,37 @@
+{
+  "total" : 4,
+  "items" : [ {
+    "uid" : "d57c5dd10c272018c2c36f0083a73be2",
+    "name" : "期权强平测试",
+    "statistic" : {
+      "failed" : 9,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 10
+    }
+  }, {
+    "uid" : "58d0dd74b94f125dbbe23995d4a3af99",
+    "name" : "期权市价委托强平",
+    "statistic" : {
+      "failed" : 9,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 9
+    }
+  }, {
+    "uid" : "155ede256caf55704c74dcbfadf58eb0",
+    "name" : "期权限价委托强平",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}
