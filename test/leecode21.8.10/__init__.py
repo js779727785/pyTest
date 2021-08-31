@@ -1,13 +1,17 @@
-"""
-2.2
-给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。
-"""
-nums=[-3,-2,-2,0,1,1,2,2,3,3,3,4]
-def fu(nums):
-    j=1
-    for i in range(1,len(nums)):
-        if nums[i]!=nums[i-1]:
-            nums[j]=nums[i]
-            j+=1
-    return nums[:j],j,nums
-print(fu(nums))
+class ListNode():
+    def __init__(self,head):
+        self.head=head
+        self.next=None
+class FF():
+    def fun(self,listNode,tar):
+        dummyNode=ListNode(0)
+        dummyNode.next=listNode
+        slow,fast=dummyNode
+        while tar!=0:
+            fast=fast.next
+            tar-=1
+        while fast!=None:
+            slow=slow.next
+            fast=fast.next
+        slow.next=slow.next.next
+        return dummyNode.next
