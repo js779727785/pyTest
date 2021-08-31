@@ -299,10 +299,68 @@ class Solution:
 给定两个（单向）链表，判定它们是否相交并返回交点。请注意相交的定义基于节点的引用，而不是基于节点的值。
 换句话说，如果一个链表的第k个节点与另一个链表的第j个节点是同一节点（引用完全相同），则这两个链表相交。
 """
-#TODO
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        lengthA, lengthB = 0, 0
+        curA, curB = headA, headB
+        while (curA != None):  # 求链表A的长度
+            curA = curA.next
+            lengthA += 1
+
+        while (curB != None):  # 求链表B的长度
+            curB = curB.next
+            lengthB += 1
+
+        curA, curB = headA, headB
+
+        if lengthB > lengthA:  # 让curA为最长链表的头，lenA为其长度
+            lengthA, lengthB = lengthB, lengthA
+            curA, curB = curB, curA
+
+        gap = lengthA - lengthB  # 求长度差
+        while (gap != 0):
+            curA = curA.next  # 让curA和curB在同一起点上
+            gap -= 1
+
+        while (curA != None):
+            if curA == curB:
+                return curA
+            else:
+                curA = curA.next
+                curB = curB.next
+        return None
 
 """
 7.环形链表II
 题意： 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
 为了表示给定链表中的环，使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+7.1找到环入口
+思路：先通过快慢指针通过是否相遇判断哪是否有环；再x + y = n (y + z)转换为x = (n - 1) (y + z) + z 注意这里n一定是大于等于1的，因为 fast指针至少要多走一圈才能相遇slow指针。
+x为头到入口，y为入口到相遇点，z相遇点到入口
 """
+
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            # 如果相遇
+            if slow == fast:
+                p = head
+                q = slow
+                while p!=q:
+                    p = p.next
+                    q = q.next
+                #你也可以return q
+                return p
+
+        return None
