@@ -1,4 +1,4 @@
-#coding=utf-8
+    #coding=utf-8
 import unittest
 import requests
 from lib.generateTestCases import __generateTestCases
@@ -17,7 +17,7 @@ headers = {"Content-type": "application/json","X-Auth-Token":""}
 class QueryAvailableline(unittest.TestCase):
     """查询总的可用借款额度---Jmelody"""
     def setUp(self):
-        logger.info("****************查询总的可用借款额度接口开始****************")
+        logger.info("****************查  询总的可用借款额度接口开始****************")
 
     def getTest(self, tx):
         infoUrl = "/nbigfront/loan/queryavailableline"

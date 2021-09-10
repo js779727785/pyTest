@@ -362,5 +362,4 @@ class Solution:
                     q = q.next
                 #你也可以return q
                 return p
-
         return None

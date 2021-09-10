@@ -3,7 +3,7 @@ import datetime,requests
 from lib.log import logger
 import requests,random
 import operator
-"""斐波那契数列"""
+"""斐波那契数列求和"""
 def func(n):
     if n==0:
         return 0

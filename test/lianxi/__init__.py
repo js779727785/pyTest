@@ -1,6 +1,6 @@
 """6.1写一个冒泡排序和快速排序"""
 """6.2一个list,一个集合，取出在A内不在B内的，输出新的list"""
-"""6.3一个list,一个集合，取出即不在A内不在B内的元素，输出新的list"""
+"""6.3一个list,一个集合，取出AB非共有的元素，输出新的list"""
 """6.4一个list,一个集合,相互乘积，得到一个新的list并去重排序"""
 """6.5一个list,一个集合，取出AB内共有的元素，输出新的list"""
 c=[2,3,4,5,6,3,2,99,88]
@@ -51,13 +51,3 @@ def xx(lis):
     re=list(map(lambda x:x*x,lis))
     return re
 # print(xx(c))
-nums=[8,9,1,2,3,4,5,6,88]
-nums1=[88,99]
-target=5
-def twoSum( nums, target):
-    hashtable = dict()
-    for i,num in enumerate(nums):
-        if target-num in hashtable:
-            return i,hashtable(target-num)
-        else:
-            hashtable[num]=i

@@ -160,14 +160,18 @@ def x3(lis,s):
     if len(lis)<1:
         return None
     else:
-        slow=Sum=re=0
+        slow=Sum=0
+        re=float("inf")
         for i in range(len(lis)):
             Sum+=lis[i]
             while Sum>=s:
                 re=i-slow+1
                 Sum-=lis[slow]
                 slow+=1
-        return re
+        if re==float("inf"):
+            return 0
+        else:
+            return re
 # print(x3(nums,3))
 
 """

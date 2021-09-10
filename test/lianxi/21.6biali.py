@@ -14,7 +14,7 @@ dict1={"aa":'11',"bb":[1,2,3],"cc":{}}
 #     print("dict的key是：%s    value为：%s" % (key,dict1[key]))
 
 
-#Python验证多个元素都在list中,前者是后者的子集
+#Python验证多个元素都在list中,前者是后者的子集,或者用A <= B 小于号判断
 # def inList():
 #     r = set(aa).issubset(set(repidList))
 #     print(r)

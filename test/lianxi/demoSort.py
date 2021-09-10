@@ -1,4 +1,4 @@
-"""python将一个list去重并按出现次数从大到小排序
+"""python将一个list按出现次数从大到小排序
 https://blog.csdn.net/HuaCode/article/details/79763687
 sorted(iterable,key,reverse)
 """
@@ -27,6 +27,11 @@ list_a = [1,2,3,4,5,6,1,1,1,2,2,3,4,4,5,5,5,5,6,6,6,6,6,6]
 2.用sorted对dic排序
 3.循环输出排序后的dic
 """
+from collections import Counter
+dic=Counter(list_a)
+print(dic)
+re=sorted(dic.keys(),key=dic.get,reverse=True)
+print(re)
 a=[22,3333,3333,4444,4444,22,3333,222,22,333,333,22,22,3333,3333,4444,4444,11,22,22,11,22]
 from collections import Counter
 import operator

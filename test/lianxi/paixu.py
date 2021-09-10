@@ -21,7 +21,7 @@ def func(a):
                 a[j],a[j+1]=a[j+1],a[j]
                 count+=1
     return a,count
-print(func(a))
+# print(func(a))
 """快速排序"""
 def quick_sort(arr):
     if len(arr) < 2:
@@ -46,7 +46,18 @@ dic = {'a':2,'b':1,'c':3}
 z={value:key for key,value in dic.items()}
 # print(z)
 d = sorted(dic,key = lambda k:k[0])
+# print(d)
 import operator
 x = sorted(dic.items(),key =operator.itemgetter(0))
-print(d)
+# print(d)
+lis=['a','b','b','c','a','b','d','d','d','d']
 
+#按出现次数排序，取出出现最多的
+def ff(lis):
+    from collections import Counter
+    re=Counter(lis)
+    # print(re)
+    # print(re.most_common())
+    rr=max(re.keys(),key=re.get)
+    return rr
+print(ff(lis))

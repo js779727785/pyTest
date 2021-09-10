@@ -50,16 +50,24 @@ def digui(n):
     re=reduce(lambda x,y:x*y,range(1,n+1))
     return re
 # print(digui(3))
+def fb(nums):
+    if nums==0:
+        return 0
+    if nums==1 or nums==2:
+        return 1
+    else:
+        return fb(nums-1)+fb(nums-2)
+# print(fb(10))
 """斐波那契数列
 已知一个数列：1、1、2、3、5、8、13、。。。。的规律为从 3 开始的每一项都
 等于其前两项的和，这是斐波那契数列。求满足规律的 100 以内的所以数据"""
-def fu():
+def fu(n):
     a=0
     b=1
-    while b<100:
+    while b<n:
         print(b,end=',')
         a,b=b,a+b
-# fu()
+# fu(100)
 """计算 x 的 n 次方，如：3 的 4 次方 为 3*3*3*3=81"""
 def fn(x,n):
     if n==0:
