@@ -79,13 +79,14 @@ def checkType(self,tel_num,product_type):
      print("我叫{}，今年{}岁".format('James', '12'))
 # checkType('1',16803581611,'QYD')
 
-"""九九乘法表"""
-def jiujiu():
-    for i in range(1,10):
-        for j in range(1,i+1):
-            print("{}*{}={}\t".format(j,i,i*j),end="")
-        print()
-# jiujiu()
+# # """99九九乘法表"""
+#     def jiujiu():
+#         for i in range(1,10):
+#             for j in range(1,i+1):
+#                 print("{}*{}={}\t".format(j,i,i*j),end="")
+#             print()
+#     # jiujiu()
+
 #Python切片
 def listDemo():
     """list[start:end:step]
@@ -110,7 +111,7 @@ def listDemo():
     print(lis[3::-1])
     print(lis[3::-2])
     print(lis[6::-2])
-# listDemo()
+listDemo()
 """abs绝对值函数"""
 def absdemo(n):
     print(abs(-1))

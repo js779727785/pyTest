@@ -5,6 +5,28 @@
 数组查询和删除时间复杂度：O(n),查询时间复杂度O(1)
 """
 
+"""
+!!!
+数组内各个数出现次数
+def listodic(lis):
+    re={}
+    for i in range(len(lis)):
+        re[lis[i]]=re.get(lis[i],0)+1
+    return re
+数组中第tar大的字符
+def fu1(lis,tar):
+    #取出字符
+    re={}
+    for i in lis:
+        re[i]=re.get(i,0)+1
+    #按照值排序，默认从小到大，取反
+    re=sorted(re,key=re.get,reverse=True)
+    #取第tar的值
+    return re[tar-1]
+print(fu1(lis,3))
+"""
+
+
 def xdeNci(x,n):
     if n==0:
         return 1
@@ -38,7 +60,7 @@ def shazi(lis,tar):
 #
 def fen2(lis,tar):
     left,right=0,len(lis)-1
-    while left <= right:
+    while left <= right: #注意用while不是for
         #注意Python中//为整除，/结果为float,
         # mid =left+((right-left)//2)
         mid =(left+right)//2
@@ -80,26 +102,29 @@ def yichu(lis,val):
 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。
 """
 nums=[-3,-2,-2,0,1,1,2,2,3,3,3,4]
-def fu(nums):
-    j=1
-    for i in range(1,len(nums)):
-        if nums[i]!=nums[i-1]:
-            nums[j]=nums[i]
-            j+=1
-    return nums[:j],j,nums
-# print(fu(nums))
-
-def xx(lis):
-    if len(lis)<1:
-        return 0
+def fu(lis):
+    if len(lis)<2:
+        return lis
     else:
         j=1
         for i in range(1,len(lis)):
             if lis[i]!=lis[i-1]:
                 lis[j]=lis[i]
                 j+=1
+        return lis[:j],j,lis
+
+def xx(lis):
+    if len(lis)<1:
+        return 0
+    else:
+        j=1
+        for i in range(1,len(lis)): #注意这里也从1开始
+            if lis[i]!=lis[i-1]:
+                lis[j]=lis[i]
+                j+=1
         return j,lis
 # print(xx(nums))
+
 """
 2.3
 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
@@ -116,7 +141,7 @@ def x1(nums):
                 nums[j]=nums[i]
                 j+=1
         print(j,nums[:j])
-        for j in range(j,len(nums)):
+        for j in range(j,len(nums)): #注意范围
             nums[j]=0
         return nums
 # de=[0,1,0,3,12]
@@ -164,7 +189,7 @@ def x3(lis,s):
         re=float("inf")
         for i in range(len(lis)):
             Sum+=lis[i]
-            while Sum>=s:
+            while Sum>=s: #注意
                 re=i-slow+1
                 Sum-=lis[slow]
                 slow+=1
@@ -172,43 +197,22 @@ def x3(lis,s):
             return 0
         else:
             return re
-# print(x3(nums,3))
-
+# print(x3(nums,7))
 """
-4.2
-给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
-
-输入：s = "ADOBECODEBANC", t = "ABC"
-输出："BANC"
+6、买股票的最佳时机
+如输入：lis=[7,1,5,3,6,4]输出5；输入[7,6,4,3,1]输出0
 """
-s = "ADOBECODEBANC"
-t = "ABC"
+def fun3(lis):
+    minprice=float("inf") #注意这里定义最小钱不是0而是正无穷大
+    maxprice=0
+    for i in range(len(lis)):
+        maxprice=max(lis[i]-minprice,maxprice)
+        minprice=min(lis[i],minprice)
+    return maxprice
+ll3=[7,6,4,3,1]
+print(fun3(ll3))
 
-import collections
-def minWindow( s: str, t: str) -> str:
-    need = collections.defaultdict(int)
-    for c in t:
-        need[c] += 1
-    needCnt = len(t)
-    i = 0
-    res = (0, float('inf'))
-    for j, c in enumerate(s):
-        if need[c] > 0:
-            needCnt -= 1
-        need[c] -= 1
-        if needCnt == 0:  # 步骤一：滑动窗口包含了所有T元素
-            while True:  # 步骤二：增加i，排除多余元素
-                c = s[i]
-                if need[c] == 0:
-                    break
-                need[c] += 1
-                i += 1
-            if j - i < res[1] - res[0]:  # 记录结果
-                res = (i, j)
-            need[s[i]] += 1  # 步骤三：i增加一个位置，寻找新的满足条件滑动窗口
-            needCnt += 1
-            i += 1
-    return '' if res[1] > len(s) else s[res[0]:res[1] + 1]  # 如果res始终没被更新过，代表无满足条件的结果
+
 """
 5  螺旋数组
 题目地址：https://leetcode-cn.com/problems/spiral-matrix-ii/ 给定一个正整数 n，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的正方形矩阵。

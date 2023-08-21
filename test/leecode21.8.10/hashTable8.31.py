@@ -9,6 +9,16 @@
 """
 
 """
+!!!
+数组内各个数出现次数
+def listodic(lis):
+    re={}
+    for i in range(len(lis)):
+        re[lis[i]]=re.get(lis[i],0)+1
+    return re
+"""
+
+"""
 1、有效的字母异位词
 https://leetcode-cn.com/problems/valid-anagram/
 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
@@ -22,7 +32,7 @@ t = "nagaram"
 # print(set(s)<=set(t))
 def x1(s,t):
     from collections import defaultdict
-    s_dict=defaultdict(int)
+    s_dict=defaultdict(int) #注意，如果是普通的dict,要判断第一次的创建 re[val]=1 if val not in re.key() else re[val]+=1
     t_dict=defaultdict(int)
     for i in s:
         s_dict[i]+=1
@@ -99,6 +109,8 @@ def x2(lis1,lis2):
 """
 nums=[8,9,1,2,3,4,5,6,88]
 target=5
+
+
 def twoSum( nums, target):
     hashtable = dict()
     for i,num in enumerate(nums):
@@ -107,18 +119,19 @@ def twoSum( nums, target):
             return [hashtable[target - num], i]
         hashtable[nums[i]] = i
     return []
-def fu(lis,tar):
-    hashtable=dict()
-    for i in range(len(lis)):
-        hashtable[lis[i]]=i
-        if tar-lis[i] in hashtable:#注意这里不是在lis而是hashtable
-            return [hashtable[tar-lis[i]],i]
+
+def two(lis,val):
+    re=dict()
+    for i,v in enumerate(lis):
+        if val-v in re:
+            return [re[val-v],i]
+        re[lis[i]]=i
     return []
 # print(twoSum(nums,target))
 
 
 """
-4编写一个算法来判断一个数 n 是不是快乐数。
+4.编写一个算法来判断一个数 n 是不是快乐数。
 
 「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。如果 可以变为  1，那么这个数就是快乐数。
 
@@ -146,3 +159,104 @@ class Solution:
             sum_ += (n % 10) * (n % 10)
             n //= 10
         return sum_
+"""
+5.三数之和
+给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。
+注意： 答案中不可以包含重复的三元组。
+示例：
+给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+满足要求的三元组集合为： [ [-1, 0, 1], [-1, -1, 2] ]
+"""
+
+def threeSum(nums):
+    ans = []
+    n = len(nums)
+    nums.sort()
+    for i in range(n):
+        left = i + 1
+        right = n - 1
+        if nums[i] > 0:
+            break
+        if i >= 1 and nums[i] == nums[i - 1]:
+            continue
+        while left < right:
+            total = nums[i] + nums[left] + nums[right]
+            if total > 0:
+                right -= 1
+            elif total < 0:
+                left += 1
+            else:
+                ans.append([nums[i], nums[left], nums[right]])
+                while left != right and nums[left] == nums[left + 1]: left += 1
+                while left != right and nums[right] == nums[right - 1]: right -= 1
+                left += 1
+                right -= 1
+    return ans
+
+"""
+6、四数之和
+题意：给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+注意：
+答案中不可以包含重复的四元组。
+示例： 给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。 满足要求的四元组集合为： [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]
+
+"""
+
+# 双指针法
+class Solution:
+    def fourSum(self, nums, target: int):
+
+        nums.sort()
+        n = len(nums) #注意
+        res = []
+        for i in range(n):
+            if i > 0 and nums[i] == nums[i - 1]: continue
+            for k in range(i + 1, n): #注意
+                if k > i + 1 and nums[k] == nums[k - 1]: continue
+                p = k + 1
+                q = n - 1
+
+                while p < q: #注意
+                    if nums[i] + nums[k] + nums[p] + nums[q] > target:
+                        q -= 1
+                    elif nums[i] + nums[k] + nums[p] + nums[q] < target:
+                        p += 1
+                    else:
+                        res.append([nums[i], nums[k], nums[p], nums[q]])
+                        while p < q and nums[p] == nums[p + 1]: p += 1
+                        while p < q and nums[q] == nums[q - 1]: q -= 1
+                        p += 1
+                        q -= 1
+        return res
+
+
+# 哈希表法
+class Solution(object):
+    def fourSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        # use a dict to store value:showtimes
+        hashmap = dict()
+        for n in nums:
+            if n in hashmap:
+                hashmap[n] += 1
+            else:
+                hashmap[n] = 1
+
+        # good thing about using python is you can use set to drop duplicates.
+        ans = set()
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                for k in range(j + 1, len(nums)):
+                    val = target - (nums[i] + nums[j] + nums[k])
+                    if val in hashmap:
+                        # make sure no duplicates.
+                        count = (nums[i] == val) + (nums[j] == val) + (nums[k] == val)
+                        if hashmap[val] > count:
+                            ans.add(tuple(sorted([nums[i], nums[j], nums[k], val])))
+                    else:
+                        continue
+        return ans

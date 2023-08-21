@@ -1,7 +1,28 @@
+"""
+数组中第tar大的字符
+"""
+
+lis=['b','a','a','a','d','d']
+
+"""方法1"""
+def fu1(lis):
+    re={}
+    for i in range(len(lis)):
+        re[lis[i]]=re.get(lis[i],0)+1
+    re=sorted(re,key=re.get,reverse=True)
+    return re
+"""方法2"""
+from collections import Counter
+re=Counter(lis)
+re=sorted(re,key=re.get,reverse=True)
+# re=max(re,key=re.get)
+
+
 """python将一个list按出现次数从大到小排序
 https://blog.csdn.net/HuaCode/article/details/79763687
 sorted(iterable,key,reverse)
 """
+
 list_a = [1,2,3,4,5,6,1,1,1,2,2,3,4,4,5,5,5,5,6,6,6,6,6,6]
 #原始方法
 #print("list_a: " + str(list_a) + '\n')
@@ -54,3 +75,12 @@ print(max(re.keys()))
 print(max(re.keys(),key=re.get))
 # #max中无key，则直接比较参数大小，输出参数内最大值
 # print(max(re.values()))
+
+# ~~~~~~
+re=[{'name':'Homer', 'age':39}, {'name':'Bart', 'age':10}]
+d1={'name':'Homer', 'age':39}
+# def sortedDictValues1(adict):
+#     items = adict.items()
+#     items.sort()
+#     return [value for key, value in items]
+# print(sortedDictValues1(d1))

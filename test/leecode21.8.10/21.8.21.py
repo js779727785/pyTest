@@ -1,4 +1,4 @@
-"""两数之和"""
+"""¬两数之和"""
 num=[1,2,3,4,5,6,7,8]
 target=5
 def twoSum(num,target):

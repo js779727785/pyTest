@@ -2,6 +2,7 @@ pidList = ['少儿']
 repidList = ['教师', 'CRM']
 aa = ['教师', 'CRM']
 casereid3 =['aaa','xxx']
+repidList2 = ['教师', '少儿','CRM']
 
 
 dict1={"aa":'11',"bb":[1,2,3],"cc":{}}
@@ -22,4 +23,3 @@ dict1={"aa":'11',"bb":[1,2,3],"cc":{}}
 # #Python验证两个list是否有交集
 # if list(set(repidList) & set(casereid3)):
 #     print('2')
-
