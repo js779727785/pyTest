@@ -60,19 +60,29 @@ s = "dfa12321afd"
 """
 第K大的数
 """
-# class Solution:
-#     def findKthLargest(self, nums,k) -> int:
-#         maxHeap = []
-#         for x in nums:
-#             heapq.heappush(maxHeap, -x)
-#         for _ in range(k - 1):
-#             heapq.heappop(maxHeap)
-#         return -maxHeap[0]
+s="111133332222555"
+
+# def find_kth_unique_largest_number(s, k):
+#     nums = [int(num) for num in s]
+#     heap = []
+#     unique_set = set()
+#
+#     for num in nums:
+#         if num not in unique_set:
+#             heapq.heappush(heap, num)
+#             unique_set.add(num)
+#             if len(heap) > k:
+#                 unique_set.remove(heapq.heappop(heap))
+#     print(heap)
+#
+#     return heap[0]
+# print(find_kth_unique_largest_number(s,1))
+
+
 """
 第K大的数
 利用堆，先将str中是整型的数推入heapq,最大需取反，再依次推出k-1次，最后判断堆内还有数据则继续推出为第K大的数，否则-1不存在
 """
-s="111133332222555"
 import heapq
 class Solu():
     def fun11(self,str,k):
@@ -121,3 +131,54 @@ class Solution:
         for i in range(k - 1, -1, -1):
             result[i] = heapq.heappop(pri_que)[1]
         return result
+
+"""2023.8.29
+字符串有效的括号
+输入: "({[]})"
+输出: true
+"""
+def kuo(str):
+    stack=[]
+    for s in str:
+        if s=="(":
+            stack.append(")")
+        elif s=="[":
+            stack.append("]")
+        elif s=="{":
+            stack.append("}")
+        elif not stack or stack[-1] !=s:
+            return False
+        else:
+            stack.pop()
+    return True if not stack else False
+ku="({[]})"
+# print(kuo(ku))
+
+"""
+删除字符串中所有相邻的重复项
+输入："abbaca"
+输出："ca"
+解释：例如，在 "abbaca" 中，我们可以删除 "bb" 由于两字母相邻且相同，这是此时唯一可以执行删除操作的重复项。之后我们得到字符串 "aaca"，其中又只有 "aa" 可以执行重复项删除操作，所以最后的字符串为 "ca"。
+"""
+
+def removeDuplicates(str):
+    re=[]
+    for s in str:
+        if re and re[-1]==s:
+            re.pop()
+        else:
+            re.append(s)
+    return "".join(re)
+s1="abbaca"
+# print(removeDuplicates(s1))
+
+"""
+用生成器来判断a是否是b的子集
+
+"""
+aaaa=[1,2,3,7]
+bbb=[1,4,5,6,3,2]
+def ffff(a,b):
+    iter(b)
+    return all(i in b for i in a)
+print(ffff(aaaa,bbb))
