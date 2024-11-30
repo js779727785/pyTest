@@ -1,16 +1,9 @@
-# str='i   im  student'
-# str='student im i'
-#
-# def fun(str):
-#     left=0
-#     right=len(str)-1
-#     for i in str:
-#         if i =='':
-#
-#     # str = list[str]
-#
-#     while left<=right:
-#         str[right],str[left]=str[left],str[right]
-#         left+=1
-#         right-=1
-#     return str
+lis=[1,2,3,4,5,6,7,8]
+"""找lis中的多数（出现次数大于len(lis)/2）"""
+num1=[3,3,3,2,2,2,5,5,5]
+
+li=[2,3,1,2,4,3]
+s = 7
+
+# print(fu(li,s))
+

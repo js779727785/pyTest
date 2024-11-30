@@ -111,21 +111,12 @@ nums=[8,9,1,2,3,4,5,6,88]
 target=5
 
 
-def twoSum( nums, target):
-    hashtable = dict()
-    for i,num in enumerate(nums):
-        if target-num in hashtable:#注意这里不是在lis而是hashtable
-            print(hashtable)
-            return [hashtable[target - num], i]
-        hashtable[nums[i]] = i
-    return []
-
-def two(lis,val):
-    re=dict()
-    for i,v in enumerate(lis):
-        if val-v in re:
-            return [re[val-v],i]
-        re[lis[i]]=i
+def twoSum(nums,tar):
+    re={}
+    for i,v in enumerate(nums):
+        if tar-v in re:
+            return [re[tar-v],i]
+        re[v]=i
     return []
 # print(twoSum(nums,target))
 

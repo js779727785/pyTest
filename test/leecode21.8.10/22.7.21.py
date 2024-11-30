@@ -39,7 +39,7 @@ def LongofStr(str):
     for i in range(len(str)):
         cur_len += 1
         # 加入之前判断，有重复的话一直左推出，直到没重复
-        while str[i] in re:
+        while str[i] in re: #注意这里是while 不是if
             re.remove(str[left])
             left += 1
             cur_len -= 1 #注意
@@ -96,7 +96,8 @@ def maxSubArray(nums):
         res = max(res, pre)
     return res
 """
-第K大的数
+值第K大的数
+用heapq
 """
 def fu11(lis,k):
     import heapq
@@ -118,3 +119,19 @@ def fu12(lis,k):
         re[v]=re.get(v,0)+1
     re=sorted(re,key=re.get,reverse=True)
     return re[k-1]
+
+"""
+峰值所在索引
+如果数组是 [1, 5, 3, 2, 4] ，那么峰值索引为 1（对应值 5）。如果数组是 [2, 2, 2, 2] ，则没有峰值，函数将返回一个空列表。
+"""
+lis=[1,3,2,4,5,3,2,4,1]
+def fun(lis):
+    re=[]
+    res=[]
+    for i in range(1,len(lis)-1):
+        if lis[i]>lis[i-1] and lis[i]>lis[i+1]:
+            re.append(lis[i])
+    for i in re:
+        res.append(lis.index(i))
+    return res
+print(fun(lis))

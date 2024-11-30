@@ -7,8 +7,17 @@ https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0034.%E5
 """
 li=[-2,-1,0,1,3,5]
 # def f1(lis,tar):
-
-# print(f1(li,33))
+#     l=0
+#     r=len(lis)
+#     while l<=r:
+#         mid=(l+r)//2
+#         if tar>lis[mid]:
+#             l=mid+1
+#         elif tar<lis[mid]:
+#             r=mid-1
+#         else:
+#             return mid
+# print(f1(li,5))
 """
 2 移除元素
 原地移动数组中的重复数，得出新长度；用双指针在一次for循环中判断后者是否等于前置
@@ -43,8 +52,21 @@ li2=[-2,-1,-1,-1,0,1,3,3,5,5]
 输入：s = 7, nums = [2,3,1,2,4,3] 输出：2 解释：子数组 [4,3] 是该条件下的长度最小的子数组。
 
 """
-# def fu(lis,s):
+# def fu(lis,tar):
+#     l = len(lis)
+#     left = 0
+#     right = 0
+#     min_len = float('inf')
+#     cur_sum = 0  # 当前的累加值
+#     while right < l:
+#         cur_sum += lis[right]
+#         while cur_sum >= tar:  # 当前累加值大于目标值 注意这里是while不是if！！！
+#             min_len = min(min_len, right - left + 1)
+#             cur_sum -= lis[left]
+#             left += 1
 #
+#         right += 1
+#     return min_len if min_len != float('inf') else 0
 # s = 7
 # nums = [2,3,1,2,4,3]
 # print(fu(nums,7))

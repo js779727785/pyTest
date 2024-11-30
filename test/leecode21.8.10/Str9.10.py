@@ -192,3 +192,16 @@ s = "abcdefg"
 说明: 当 needle 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。 对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
 #
 """
+
+""""
+判断字符串是否是回数
+"""
+def is_palindrome(s):
+    s = s.replace(" ", "").lower()  # 去除空格并转换为小写，以便更准确地判断
+    return s == s[::-1]
+
+string = "A man, a plan, a canal: Panama"
+if is_palindrome(string):
+    print(f"{string} 是回数")
+else:
+    print(f"{string} 不是回数")

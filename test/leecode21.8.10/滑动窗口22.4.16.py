@@ -23,6 +23,27 @@ def LongofStr(str):
         re.add(str[i])
     return max_len
 
+"""
+最长子串和长度
+"""
+def longest_substring(s):
+    start = 0
+    max_length = 0
+    max_substr = ""
+    char_index = {}
+    current_length = 0
+
+    for i in range(len(s)):
+        if s[i] in char_index and char_index[s[i]] >= start:
+            start = char_index[s[i]] + 1
+            current_length = i - start + 1
+        char_index[s[i]] = i
+        current_length += 1
+        if current_length > max_length:
+            max_length = current_length
+            max_substr = s[start:start + max_length]
+    return max_length, max_substr
+
 
 ss = "abcbabcbb"
 # print(LongofStr(ss))

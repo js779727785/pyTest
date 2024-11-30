@@ -32,8 +32,12 @@ def q5(lis,n):
     print(re)
 
 
+# print(q5(lis, n))
 
+lis=['b','a','a','a','d','d']
 
-print(q5(lis, n))
+from collections import Counter
+c=Counter(lis)
+re=sorted(c,key=lambda x:c[x],reverse=True)
 
 
